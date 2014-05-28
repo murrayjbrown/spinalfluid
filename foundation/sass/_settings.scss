@@ -1,5 +1,5 @@
 // Required global settings and mixins for Foundation
-@import "foundation/foundation-global";
+@import "foundation/functions";
 
 // Settings file to override Foundation variables
 
@@ -15,7 +15,7 @@
 // $em-base: 16px;
 
 // We use these to control various global styles
-// $body-bg: #fff;
+$body-bg: #fcfcfc;
 // $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
@@ -25,12 +25,12 @@
 // $font-smoothing: antialiased;
 
 // We use these to control text direction settings
- //$text-direction: ltr;
+// $text-direction: ltr;
 // $text-direction: rtl;
 
 // We use these as default colors throughout
-// $primary-color: #2ba6cb;
-// $secondary-color: #e9e9e9;
+// $primary-color: #2ba6cb;     <== Overridden via Theme customizer
+// $secondary-color: #e9e9e9;   <== Overridden via Theme customizer
 // $alert-color: #c60f13;
 // $success-color: #5da423;
 
@@ -835,6 +835,7 @@
 
 // We use these to control link styles.
 // $side-nav-link-color: $primary-color;
+// $side-nav-link-color: $primary-color;
 // $side-nav-link-color-active: lighten(#000, 30%);
 // $side-nav-font-size: emCalc(14px);
 // $side-nav-font-weight: bold;
@@ -861,6 +862,7 @@
 
 // We use these to control the active item styles
 // $sub-nav-active-font-weight: bold;
+// $sub-nav-active-bg: $primary-color;
 // $sub-nav-active-bg: $primary-color;
 // $sub-nav-active-color: #fff;
 // $sub-nav-active-padding: emCalc(3px) emCalc(9px);
@@ -1017,3 +1019,8 @@
 // $topbar-breakpoint: emCalc(940px); // Change to 9999px for always mobile layout
 // $topbar-media-query: "only screen and (min-width "#{$topbar-breakpoint}")";
 
+////////////////////////////////////////////////////////////////////////
+//
+// Local Settings
+//
+//$header-background-color: #1a4f4c;
