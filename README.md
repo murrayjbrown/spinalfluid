@@ -1,10 +1,10 @@
 # Repository
 
-* [github repo](https://github.com/murrayjbrown/spinoza)
+* [github repo](https://github.com/murrayjbrown/spinalfluid)
 
 # Description
 
-Spinoza is a responsive theme adapted from the Spine 2 theme by Paul de Wouters,
+Spinal Fluid is a responsive fluid grid theme adapted from the Spine 2 theme by Paul de Wouters,
 built upon the Hybrid Core theme framework and the Foundation front end framework.
 
 # Author
