@@ -66,7 +66,7 @@ function spine2_numeric_posts_nav() {
 
 	/**	Previous Post Link */
 	if ( get_previous_posts_link() )
-		printf( '<li>%s</li>' . "\n", get_previous_posts_link(  '&laquo; '  . __( 'Previous Page', 'spine' ) ) );
+		printf( '<li>%s</li>' . "\n", get_previous_posts_link(  '&laquo; '  . __( 'Previous Page', 'spinalfluid' ) ) );
 
 	/**	Link to first page, plus ellipses if necessary */
 	if ( ! in_array( 1, $links ) ) {
@@ -96,7 +96,7 @@ function spine2_numeric_posts_nav() {
 
 	/**	Next Post Link */
 	if ( get_next_posts_link() )
-		printf( '<li>%s</li>' . "\n", get_next_posts_link(  __( 'Next Page', 'spine' ) . ' &raquo;'  ) );
+		printf( '<li>%s</li>' . "\n", get_next_posts_link(  __( 'Next Page', 'spinalfluid' ) . ' &raquo;'  ) );
 
 	echo '</ul>' . "\n";
 

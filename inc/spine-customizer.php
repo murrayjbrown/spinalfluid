@@ -52,7 +52,7 @@ function spine2_customize_register( $wp_customize ) {
 /*		$wp_customize->add_section(
 			'spine-scheme',
 			array(
-				'title'      => esc_html__( 'Color Scheme', 'spine' ),
+				'title'      => esc_html__( 'Color Scheme', 'spinalfluid' ),
 				'priority'   => 200,
 				'capability' => 'edit_theme_options'
 			)
@@ -72,16 +72,16 @@ function spine2_customize_register( $wp_customize ) {
 		);
 
 	$schemes = array(
-		'default' => __('Default', 'spine'),
-		'blue' => __('Blue', 'spine'),
-		'red' => __('Red', 'spine'),
-		'green' => __('Green', 'spine'),
+		'default' => __('Default', 'spinalfluid'),
+		'blue' => __('Blue', 'spinalfluid'),
+		'red' => __('Red', 'spinalfluid'),
+		'green' => __('Green', 'spinalfluid'),
 	);
 
 
 
 $wp_customize->add_control( 'spine_color_scheme', array(
-'label' => __( 'Color Scheme', 'spine' ),
+'label' => __( 'Color Scheme', 'spinalfluid' ),
 'section'=> 'spine-scheme',
 'settings'=> "{$prefix}_theme_settings[color_scheme_select]",
 'type'=> 'radio',
@@ -102,7 +102,7 @@ $wp_customize->add_control( 'spine_color_scheme', array(
 
 $wp_customize->add_control(
 	new WP_Customize_Color_Control($wp_customize,'headline_color',
-	array('label' => __('Headline color','spine'),
+	array('label' => __('Headline color','spinalfluid'),
 	'section' => 'colors',
 	'settings'=> "{$prefix}_theme_settings[headline_color]",
 	)
@@ -123,7 +123,7 @@ $wp_customize->add_control(
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control($wp_customize,'body_color',
-			array('label' => __('Body Text color','spine'),
+			array('label' => __('Body Text color','spinalfluid'),
 						'section' => 'colors',
 						'settings'=> "{$prefix}_theme_settings[body_color]",
 			)
@@ -144,7 +144,7 @@ $wp_customize->add_control(
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control($wp_customize,'link_color',
-			array('label' => __('Link Text color','spine'),
+			array('label' => __('Link Text color','spinalfluid'),
 						'section' => 'colors',
 						'settings'=> "{$prefix}_theme_settings[link_color]",
 			)
@@ -165,7 +165,7 @@ $wp_customize->add_control(
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control($wp_customize,'link_hover_color',
-			array('label' => __('Link Hover Text color','spine'),
+			array('label' => __('Link Hover Text color','spinalfluid'),
 						'section' => 'colors',
 						'settings'=> "{$prefix}_theme_settings[link_hover_color]",
 			)
