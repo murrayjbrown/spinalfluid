@@ -8273,7 +8273,7 @@ td.label {
 
 /* line 2, ../sass/_layout.scss */
 #header {
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
   /* background-color: $header-background-color; */
 }
 /* line 6, ../sass/_layout.scss */
@@ -9322,11 +9322,45 @@ body {
 }
 
 /* line 38, ../sass/app.scss */
-h1#site-title a {
-  color: #222;
+header#header {
+  width: auto;
+  min-height: 200px;
 }
 
 /* line 39, ../sass/app.scss */
-h2#site-description {
+header#header #header-image {
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  position: absolute;
+  z-index: -1;
+}
+
+/* line 40, ../sass/app.scss */
+header#header #header-image img {
+  float: left;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: inherit;
+  position: inherit;
+  z-index: inherit;
+}
+
+/* line 41, ../sass/app.scss */
+header#header hgroup {
+  position: relative;
+  z-index: 10;
+}
+
+/* line 42, ../sass/app.scss */
+header#header h1#site-title a {
+  color: #222;
+}
+
+/* line 43, ../sass/app.scss */
+header#header h2#site-description {
   color: #444;
 }

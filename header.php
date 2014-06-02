@@ -22,6 +22,9 @@
         <?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
 
         <header id="header">
+            <?php $bg_url = get_header_image(); if( !empty( $bg_url ) ) : ?>
+                <div id="header-image"> <img src="<?php echo esc_url( $bg_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?> header" /></div>
+            <?php endif; ?>
 
             <hgroup id="branding">
                 <h1 id="site-title">
@@ -33,9 +36,11 @@
                     <?php endif; ?>
                     </a>
                 </h1>
-                <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+
+                <h2 id="site-description"><?php echo esc_attr( bloginfo( 'description' ) ); ?></h2>
+
             </hgroup><!-- #branding -->
-<hr>
+
         </header><!-- #header -->
 
         <?php // DEPRECATED - use of header_image for featured post images (??? - mjbrown)

@@ -34,7 +34,11 @@ Original Author URI: http://paulwp.com/
 body { background-color: $body-bg; }
 .panel {background-color: darken($body-bg, 2%); }
 
-// Header text
-h1#site-title a { color: #222; }
-h2#site-description { color: #444; }
+// Header
+header#header { width: auto; min-height: 200px; }
+header#header #header-image { display: block; background-color: #fff; width: 100%; height: auto; max-height: 200px; position: absolute; z-index: -1; }
+header#header #header-image img { float: left; width: auto; max-width: 100%; height: auto; max-height: inherit; position: inherit; z-index: inherit; }
+header#header hgroup { position: relative; z-index: 10; }
+header#header h1#site-title a { color: #222; }
+header#header h2#site-description { color: #444; }
 

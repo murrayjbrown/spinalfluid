@@ -142,9 +142,9 @@ function spine2_theme_setup() {
         'header-text' => false,
         'flex-width'    => true,
         'width'         => 1000,
-        'flex-height'    => true,
+        'flex-height'   => true,
         'height'        => 300,
-        //'default-image' => get_template_directory_uri() . '/images/header.jpg',
+        // 'default-image' => get_template_directory_uri() . '/images/header.jpg',
     );
     add_theme_support( 'custom-header', $args );
 
@@ -246,7 +246,7 @@ function spine2_get_content_template() {
 function spine2_sidebar_defaults( $defaults, $sidebar ) {
 
     $defaults = array(
-        'before_widget' => '<section id="%1$s" class=" panel widget %2$s widget-%2$s">',
+        'before_widget' => '<section id="%1$s" class="panel widget %2$s widget-%2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>'
@@ -433,10 +433,6 @@ function spine2_wp_head() {
     if(!empty($link_hover_color)){
         $output .= "a:hover { color: $link_hover_color; } ";
     }
-    if(!empty(get_header_image())){
-        $output .= "#header { background-image: url('$header_image') !important; }";
-    }
-
     echo $output .= " </style>" . PHP_EOL;
 }
 
