@@ -22,26 +22,24 @@
         <?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
 
         <header id="header">
-            <?php $bg_url = get_header_image(); if( !empty( $bg_url ) ) : ?>
-                <div class="header-image"> <img src="<?php echo esc_url( $bg_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?> header" /></div>
-            <?php endif; ?>
-
             <hgroup id="branding">
-                <h1 id="site-title">
-                    <a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-                    <?php $logo_url = hybrid_get_setting( 'logo_upload' ); if( empty( $logo_url ) ) : ?>
+                <h1 id="site-title"><a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                    <?php $logo_url = hybrid_get_setting( 'logo_upload' );
+                    if( empty( $logo_url ) ) : ?>
                         <?php bloginfo( 'name' ); ?>
                     <?php else: ?>
                         <img src="<?php echo esc_url( $logo_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
-                    <?php endif; ?>
-                    </a>
+                    <?php endif; ?></a>
                 </h1>
-
                 <h2 id="site-description"><?php echo esc_attr( bloginfo( 'description' ) ); ?></h2>
-
             </hgroup><!-- #branding -->
 
+            <?php $bg_url = get_header_image();
+            if( !empty( $bg_url ) ) : ?>
+                <img id="header" src="<?php echo esc_url( $bg_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?> header" />
+            <?php endif; ?>
         </header><!-- #header -->
+
 
         <?php // DEPRECATED - use of header_image for featured post images (??? - mjbrown)
           // if ( get_header_image() ) echo '<div id="custom-header"><img class="header-image" src="' . esc_url( get_header_image() ) . '" alt="" /></div>';

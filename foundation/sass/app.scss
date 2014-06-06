@@ -30,32 +30,27 @@ Original Author URI: http://paulwp.com/
 //
 // Settings
 
-// Body & Panel backgrounds
+$header-height: 200px;
+
+// Body & containers
 body { background-color: $body-bg; }
 .panel {background-color: darken($body-bg, 2%); }
 
 // Menus
 
 // Header
-header#header { width: 100%; height: auto; }
-header#header div.header-image {
-    z-index: 1;
-    position: relative;
-    width: inherit;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-}
-header#header div.header-image img {
-    z-index: -1;
-    position: relative;
+header#header { position: static;
     width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    height: auto; max-height: $header-height;
+    margin-bottom: 2.0rem;
+    hgroup { min-height: $header-height;
+        > h1#site-title a { display: none; color: #222; }
+        > h2#site-description { display:none; color: #444; }
+    }
+    img { position: relative; z-index: -1;
+        width: auto;
+        height: 100%; max-height: $header-height;
+        margin: -$header-height 0 0 0;
+        padding: 0;
+    }
 }
-header#header hgroup { position: relative; z-index: 10; }
-header#header h1#site-title a { color: #222; }
-header#header h2#site-description { color: #444; }
-
