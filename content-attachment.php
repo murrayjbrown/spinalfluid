@@ -8,12 +8,12 @@
 
 		<div class="entry-content">
 			<?php hybrid_attachment(); // Function for handling non-image attachments. ?>
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', spinalfluid ) ); ?>
-			<?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', spinalfluid ) . '</span>', 'after' => '</p>' ) ); ?>
+			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'spine2' ) ); ?>
+			<?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'spine2' ) . '</span>', 'after' => '</p>' ) ); ?>
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer">
-			<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( 'Published on [entry-published] [entry-edit-link before="| "]', spinalfluid ) . '</div>' ); ?>
+			<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( 'Published on [entry-published] [entry-edit-link before="| "]', 'spine2' ) . '</div>' ); ?>
 		</footer><!-- .entry-footer -->
 
 	<?php } else { ?>
@@ -25,7 +25,7 @@
 		<div class="entry-summary">
 			<?php if ( current_theme_supports( 'get-the-image' ) ) get_the_image(); ?>
 			<?php the_excerpt(); ?>
-			<?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', spinalfluid ) . '</span>', 'after' => '</p>' ) ); ?>
+			<?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'spine2' ) . '</span>', 'after' => '</p>' ) ); ?>
 		</div><!-- .entry-summary -->
 
 	<?php } ?>

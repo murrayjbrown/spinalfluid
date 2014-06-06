@@ -24,7 +24,7 @@
 						} ?>
 
 						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', spinalfluid ), 'after' => '</p>' ) ); ?>
+						<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', 'spine2' ), 'after' => '</p>' ) ); ?>
 
 					</div><!-- .entry-content -->
 
@@ -36,7 +36,7 @@
 
 					<?php if ( !empty( $gallery ) ) { ?>
 						<div class="image-gallery">
-							<h3><?php _e( 'Gallery', spinalfluid ); ?></h3>
+							<h3><?php _e( 'Gallery', 'spine2' ); ?></h3>
 							<?php echo $gallery; ?>
 						</div>
 					<?php } ?>
