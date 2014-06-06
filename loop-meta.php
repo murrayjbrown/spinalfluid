@@ -51,7 +51,7 @@ if ( is_singular() )
 		<h1 class="loop-title"><?php echo esc_attr( get_search_query() ); ?></h1>
 
 		<div class="loop-description">
-			<?php echo wpautop( sprintf( __( 'You are browsing the search results for "%s"', 'spine2' ), esc_attr( get_search_query() ) ) ); ?>
+			<?php echo wpautop( sprintf( __( 'You are browsing the search results for "%s"', spinalfluid ), esc_attr( get_search_query() ) ) ); ?>
 		</div><!-- .loop-description -->
 
 	<?php } elseif ( is_post_type_archive() ) { ?>
@@ -68,25 +68,25 @@ if ( is_singular() )
 
 		<?php
 			if ( is_day() )
-				$date = get_the_time( __( 'F d, Y', 'spine2' ) );
+				$date = get_the_time( __( 'F d, Y', spinalfluid ) );
 			elseif ( is_month() )
-				$date = get_the_time( __( 'F Y', 'spine2' ) );
+				$date = get_the_time( __( 'F Y', spinalfluid ) );
 			elseif ( is_year() )
-				$date = get_the_time( __( 'Y', 'spine2' ) );
+				$date = get_the_time( __( 'Y', spinalfluid ) );
 		?>
 
 		<h1 class="loop-title"><?php echo $date; ?></h1>
 
 		<div class="loop-description">
-			<?php echo wpautop( sprintf( __( 'You are browsing the site archives for %s.', 'spine2' ), $date ) ); ?>
+			<?php echo wpautop( sprintf( __( 'You are browsing the site archives for %s.', spinalfluid ), $date ) ); ?>
 		</div><!-- .loop-description -->
 
 	<?php } elseif ( is_archive() ) { ?>
 
-		<h1 class="loop-title"><?php _e( 'Archives', 'spine2' ); ?></h1>
+		<h1 class="loop-title"><?php _e( 'Archives', spinalfluid ); ?></h1>
 
 		<div class="loop-description">
-			<?php echo wpautop( __( 'You are browsing the site archives.', 'spine2' ) ); ?>
+			<?php echo wpautop( __( 'You are browsing the site archives.', spinalfluid ) ); ?>
 		</div><!-- .loop-description -->
 
 	<?php } // End if check ?>
