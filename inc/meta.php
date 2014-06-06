@@ -40,7 +40,7 @@ function spine2_hide_header_img_meta_box( $object, $box ) { ?>
 	<?php wp_nonce_field( basename( __FILE__ ), 'spine2_hide_header_img_nonce' ); ?>
 
 	<p>
-		<label for="spine2-hide-header-img"><?php _e( "Tick this box to hide the header image on this page/post.", 'spine2' ); ?></label>
+		<label for="spine2-hide-header-img"><?php _e( "Tick this box to hide the header image on this page/post.", 'spinalfluid' ); ?></label>
 		<br />
 		<input type="checkbox" name="spine2-hide-header-img" id="spine2-hide-header-img" value="1" <?php checked( intval( get_post_meta( $object->ID, 'spine2_hide_header_img', true )), 1 ); ?>/>
 	</p>

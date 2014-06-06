@@ -16,7 +16,7 @@
 			<div class="wrap">
 				<hr>
 				<div class="footer-content">
-					<?php echo apply_atomic_shortcode( 'footer_content', '<p class="credit">' . __( 'Copyright &copy; [the-year] [site-link]. Powered by [wp-link] and [theme-link].', 'spine2' ) . '</p>' ); ?>
+					<?php echo apply_atomic_shortcode( 'footer_content', '<p class="credit">' . __( 'Copyright &copy; [the-year] [site-link]. Powered by [wp-link] and [theme-link].', 'spinalfluid' ) . '</p>' ); ?>
 				</div><!-- .footer-content -->
 
 			</div>
