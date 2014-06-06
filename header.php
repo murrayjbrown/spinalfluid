@@ -23,7 +23,7 @@
 
         <header id="header">
             <?php $bg_url = get_header_image(); if( !empty( $bg_url ) ) : ?>
-                <div id="header-image"> <img src="<?php echo esc_url( $bg_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?> header" /></div>
+                <div class="header-image"> <img src="<?php echo esc_url( $bg_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?> header" /></div>
             <?php endif; ?>
 
             <hgroup id="branding">
