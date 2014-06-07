@@ -189,7 +189,7 @@ function spine2_theme_setup() {
     add_action('widgets_init', 'spine2_register_sidebars', 11);
 
     // Add customizer styles to frontend
-    add_action( 'wp_head', 'spine2_wp_head' );
+    // add_action( 'wp_head', 'spine2_wp_head' );
 
     add_editor_style();
 
