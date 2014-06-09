@@ -22,12 +22,10 @@ Original Author URI: http://paulwp.com/
 //
 
 @import "settings";
-//@import "top-bar";
-
 @import "foundation";
+@import "menu-bar";
 @import "defaults";
 @import "layout";
-
 
 //
 // Application Customizations
@@ -38,9 +36,10 @@ Original Author URI: http://paulwp.com/
 body { background-color: $body-bg; }
 .panel {background-color: darken($body-bg, 2%); }
 
+
 // Links
 a { color: $primary-color;
-    &:hover { color: $secondary-color; }
+    &:hover { /* color: $secondary-color; */ opacity: 0.5; text-decoration: underline; }
 }
 
 // Header
@@ -54,10 +53,10 @@ header#header { position: static;
         max-height: $header-height;
         margin-top: 0; margin-bottom: 0;
         padding-top: 0; padding-bottom: 0;
-        > h1#site-title { display: block;
-            a { color: #222; }
+        > h1#site-title { display: none;
+            a { color: $header-font-color; }
         }
-        > h2#site-description { display: block; color: #444; }
+        > h2#site-description { display: none; color: $subheader-font-color; }
     }
     img { position: relative; z-index: -1; float: left;
         width: auto; height: 100%;
