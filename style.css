@@ -16,6 +16,7 @@ Original Theme URI: http://spine.paulwp.com
 Original Author: Paul de Wouters
 Original Author URI: http://paulwp.com/
 */
+@import url("https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Source+Sans+Pro|Source+Code+Pro|Dosis");
 /* line 324, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.2.3/";
@@ -78,11 +79,11 @@ body {
 
 /* line 373, ../bower_components/foundation/scss/foundation/components/_global.scss */
 body {
-  background: #fcfcfc;
-  color: #222222;
+  background: #f2f2f2;
+  color: #444444;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -1617,7 +1618,7 @@ select {
   color: #222222;
   padding: 1rem;
   display: block;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
 }
 /* line 39, ../bower_components/foundation/scss/foundation/components/_accordion.scss */
@@ -2317,7 +2318,7 @@ button, .button, input[type="submit"] {
   border-style: solid;
   border-width: 0px;
   cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -3566,7 +3567,7 @@ input[type="time"],
 input[type="url"],
 textarea {
   -webkit-appearance: none;
-  background-color: white;
+  background-color: #e5e5e5;
   font-family: inherit;
   border: 1px solid #cccccc;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -3615,7 +3616,7 @@ input[type="tel"]:focus,
 input[type="time"]:focus,
 input[type="url"]:focus,
 textarea:focus {
-  background: #fafafa;
+  background: white;
   border-color: #999999;
   outline: none;
 }
@@ -4069,7 +4070,7 @@ kbd {
 /* line 91, ../bower_components/foundation/scss/foundation/components/_labels.scss */
 .label {
   font-weight: normal;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
   text-decoration: none;
   line-height: 1;
@@ -4697,7 +4698,7 @@ ul.pagination li, ul.page-numbers li {
   color: #eeeeee;
   font-weight: normal;
   font-size: 1rem;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 143, ../bower_components/foundation/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .price {
@@ -4707,7 +4708,7 @@ ul.pagination li, ul.page-numbers li {
   color: #333333;
   font-weight: normal;
   font-size: 2rem;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 144, ../bower_components/foundation/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .description {
@@ -5047,7 +5048,7 @@ dialog[open] {
   padding: 0.875rem 0;
   list-style-type: none;
   list-style-position: inside;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 70, ../bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li {
@@ -5070,7 +5071,7 @@ dialog[open] {
 .side-nav li.active > a:first-child:not(.button) {
   color: #38aaa4;
   font-weight: normal;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 92, ../bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li.divider {
@@ -5238,7 +5239,7 @@ dialog[open] {
   display: inline;
   margin-left: 1rem;
   margin-bottom: 0.625rem;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 0.875rem;
   color: #999999;
@@ -5841,10 +5842,10 @@ p aside {
 /* Default header styles */
 /* line 247, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Gentium Book Basic", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
   font-weight: normal;
   font-style: normal;
-  color: #222222;
+  color: #333333;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -5853,7 +5854,7 @@ h1, h2, h3, h4, h5, h6 {
 /* line 257, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
-  color: #6f6f6f;
+  color: #7a7a7a;
   line-height: 0;
 }
 
@@ -5890,7 +5891,7 @@ h6 {
 /* line 271, ../bower_components/foundation/scss/foundation/components/_type.scss */
 .subheader {
   line-height: 1.4;
-  color: #6f6f6f;
+  color: #7a7a7a;
   font-weight: normal;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -6021,7 +6022,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #222222;
+  color: #444444;
   border-bottom: 1px dotted #dddddd;
   cursor: help;
 }
@@ -6042,7 +6043,7 @@ blockquote {
 blockquote cite {
   display: block;
   font-size: 0.8125rem;
-  color: #555555;
+  color: #626262;
 }
 /* line 396, ../bower_components/foundation/scss/foundation/components/_type.scss */
 blockquote cite:before {
@@ -6051,14 +6052,14 @@ blockquote cite:before {
 /* line 401, ../bower_components/foundation/scss/foundation/components/_type.scss */
 blockquote cite a,
 blockquote cite a:visited {
-  color: #555555;
+  color: #626262;
 }
 
 /* line 407, ../bower_components/foundation/scss/foundation/components/_type.scss */
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: #6f6f6f;
+  color: #7a7a7a;
 }
 
 /* Microformats */
@@ -6252,7 +6253,7 @@ blockquote p {
   background: #efefef;
   color: #222222;
   padding: 1rem 2rem;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
 }
 /* line 47, ../bower_components/foundation/scss/foundation/components/_tabs.scss */
@@ -6678,7 +6679,7 @@ meta.foundation-mq-topbar {
   color: #1a4f4c;
   padding: 12px 0 12px 0;
   padding-left: 15px;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: bolder;
   text-transform: none;
@@ -8213,7 +8214,7 @@ meta.foundation-mq-menubar {
   color: #1a4f4c;
   padding: 12px 0 12px 0;
   padding-left: 15px;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: bolder;
   text-transform: none;
@@ -9994,28 +9995,31 @@ a.th {
   margin-bottom: 1em;
 }
 
-/* line 36, ../sass/app.scss */
-body {
-  background-color: #fcfcfc;
-}
-
-/* line 37, ../sass/app.scss */
-.panel, .sticky {
-  background-color: #f7f7f7;
-}
-
 /* line 41, ../sass/app.scss */
+body {
+  background-color: #f2f2f2;
+}
+
+/* line 42, ../sass/app.scss */
+.panel, .sticky {
+  background-color: #ededed;
+}
+/* line 43, ../sass/app.scss */
+.panel > h1, .sticky > h1, .panel h2, .sticky h2, .panel h3, .sticky h3, .panel h4, .sticky h4, .panel h5, .sticky h5, .panel h6, .sticky h6 {
+  color: #666666;
+}
+
+/* line 47, ../sass/app.scss */
 a {
   color: #1a4f4c;
 }
-/* line 42, ../sass/app.scss */
+/* line 48, ../sass/app.scss */
 a:hover {
-  /* color: $secondary-color; */
-  opacity: 0.5;
+  background-color: #ffed38;
   text-decoration: underline;
 }
 
-/* line 46, ../sass/app.scss */
+/* line 52, ../sass/app.scss */
 header#header {
   position: static;
   width: 100%;
@@ -10025,7 +10029,7 @@ header#header {
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 51, ../sass/app.scss */
+/* line 57, ../sass/app.scss */
 header#header hgroup {
   height: 200px;
   min-height: 200px;
@@ -10035,20 +10039,20 @@ header#header hgroup {
   padding-top: 0;
   padding-bottom: 0;
 }
-/* line 56, ../sass/app.scss */
+/* line 62, ../sass/app.scss */
 header#header hgroup > h1#site-title {
   display: none;
 }
-/* line 57, ../sass/app.scss */
+/* line 63, ../sass/app.scss */
 header#header hgroup > h1#site-title a {
-  color: #222222;
+  color: #333333;
 }
-/* line 59, ../sass/app.scss */
+/* line 65, ../sass/app.scss */
 header#header hgroup > h2#site-description {
   display: none;
-  color: #6f6f6f;
+  color: #7a7a7a;
 }
-/* line 61, ../sass/app.scss */
+/* line 67, ../sass/app.scss */
 header#header img {
   position: relative;
   z-index: -1;

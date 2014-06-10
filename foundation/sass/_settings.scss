@@ -15,9 +15,11 @@
 // $em-base: 16px;
 
 // We use these to control various global styles
-$body-bg: #fcfcfc;
+$body-bg: #f2f2f2;
 // $body-font-color: #222;
+$body-font-color: #444;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -89,9 +91,12 @@ $secondary-color: #ffed38; // "Golden Fizz" (Pantone 803)
 
 // We use these to control header font styles
 // $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: "Gentium Book Basic", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 // $header-font-weight: bold;
+$header-font-weight: normal;
 // $header-font-style: normal;
 // $header-font-color: #222;
+$header-font-color: #333;
 // $header-line-height: 1.4;
 // $header-top-margin: .2em;
 // $header-bottom-margin: .5em;
@@ -202,7 +207,9 @@ $microformat-border-width: 0px;
 // $input-font-color: rgba(0,0,0,0.75);
 // $input-font-size: emCalc(14px);
 // $input-bg-color: #fff;
+$input-bg-color: darken($body-bg, 5%);
 // $input-focus-bg-color: darken(#fff, 2%);
+$input-focus-bg-color: lighten($body-bg, 5%);
 // $input-border-color: darken(#fff, 20%);
 // $input-focus-border-color: darken(#fff, 40%);
 // $input-border-style: solid;

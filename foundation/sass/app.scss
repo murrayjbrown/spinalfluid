@@ -18,6 +18,11 @@ Original Author URI: http://paulwp.com/
 */
 
 //
+// Import Google Fonts
+//
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Source+Sans+Pro|Source+Code+Pro|Dosis');
+
+//
 // Global Settings, Foundation Components, Default Elements, and Base Layout
 //
 
@@ -32,14 +37,15 @@ Original Author URI: http://paulwp.com/
 //
 
 
-// Body &  panels
+// Body,  panels, & forms
 body { background-color: $body-bg; }
-.panel {background-color: darken($body-bg, 2%); }
-
+.panel {background-color: darken($body-bg, 2%);
+    > h1,h2,h3,h4,h5,h6 { color: lighten($header-font-color, 20%); }
+}
 
 // Links
 a { color: $primary-color;
-    &:hover { /* color: $secondary-color; */ opacity: 0.5; text-decoration: underline; }
+    &:hover { background-color: $secondary-color; text-decoration: underline; }
 }
 
 // Header
