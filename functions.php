@@ -65,7 +65,9 @@ function spine2_theme_setup() {
 
     include_once SPINE2_INC_DIR . 'gallery-shortcode.php';
 
+    /* DISABLED (mjbrown)
     include_once SPINE2_INC_DIR . 'meta.php';
+    //DISABLED */
 
     add_action( 'customize_register', 'spine2_customize_register' );
 
@@ -123,7 +125,9 @@ function spine2_theme_setup() {
     add_theme_support( 'get-the-image' );
 
     /** Custom thumbnail size */
-    add_image_size('featured', 640, 132, true);
+    /* DISABLED (mjbrown)
+    //add_image_size('featured', 640, 132, true);
+    //DISABLED */
 
     /* Use breadcrumbs. */
     //add_theme_support( 'breadcrumb-trail' );
@@ -148,7 +152,9 @@ function spine2_theme_setup() {
     );
     add_theme_support( 'custom-header', $args );
 
+    /* DISABLED (mjbrown)
     add_theme_support('featured-header');
+    //DISABLED */
 
     /* Custom background. */
     add_theme_support(
@@ -477,7 +483,7 @@ function wptuts_screen_help( $contextual_help, $screen_id, $screen ) {
 }
 
 /*
- * DEPRECATED - use of header_image for featured post images (??? - mjbrown)
+ * DISABLED (mjbrown)
  *
 add_filter( 'theme_mod_header_image', 'spine2_theme_mod_header_image', 11 );
 
@@ -488,12 +494,13 @@ function spine2_theme_mod_header_image( $url ) {
 
     if(!is_singular())
         return;
+
     if ( get_post_meta(get_the_id(),'spine2_hide_header_img', true) )
         $url = '';
 
     return $url;
 }
-*/
+//DISABLED */
 
 // Replaces the excerpt "more" text by a link
 function spine2_new_excerpt_more($more) {

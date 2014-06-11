@@ -47,25 +47,51 @@ body { background-color: $body-bg; }
 a { color: $primary-color;
     &:hover { background-color: $secondary-color; text-decoration: underline; }
 }
+a.th { max-width: 100%;
+    height: auto;
+    background-color: $body-bg;
+    border: 0;
+    box-shadow: none;
+    text-align: center;
+    > img { width: 100%;
+        height: auto;
+        border: solid 4px white;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+    }
+}
 
 // Header
-header#header { position: static;
-    width: 100%; height: $header-height;
+header#header {
+    position: static;
+    width: 100%;
+    height: $header-height;
     min-height: $header-height;
     max-height: $header-height;
-    margin-top: 0; margin-bottom: 0;
-    hgroup { height: $header-height;
+    margin-top: 0;
+    margin-bottom: 0;
+    > hgroup#branding {
+        height: $header-height;
         min-height: $header-height;
         max-height: $header-height;
-        margin-top: 0; margin-bottom: 0;
-        padding-top: 0; padding-bottom: 0;
-        > h1#site-title { display: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        > h1#site-title {
+            display: none;
             a { color: $header-font-color; }
         }
-        > h2#site-description { display: none; color: $subheader-font-color; }
+        > h2#site-description {
+            display: none;
+            color: $subheader-font-color;
+        }
     }
-    img { position: relative; z-index: -1; float: left;
-        width: auto; height: 100%;
+    > img#header {
+        position: relative;
+        z-index: -1;
+        float: left;
+        width: auto;
+        height: 100%;
         margin: -$header-height 0 0 0;
         padding: 0;
     }

@@ -41,8 +41,9 @@
         </header><!-- #header -->
 
 
-        <?php // DEPRECATED - use of header_image for featured post images (??? - mjbrown)
-          // if ( get_header_image() ) echo '<div id="custom-header"><img class="header-image" src="' . esc_url( get_header_image() ) . '" alt="" /></div>';
+        <?php /* DISABLED (mjbrown)
+          if ( get_header_image() ) echo '<div id="custom-header"><img class="header-image" src="' . esc_url( get_header_image() ) . '" alt="" /></div>';
+          //DISABLED */
         ?>
 
         <?php get_template_part( 'menu', 'secondary' ); // Loads the menu-secondary.php template. ?>

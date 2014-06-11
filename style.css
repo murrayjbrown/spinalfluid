@@ -10019,7 +10019,24 @@ a:hover {
   text-decoration: underline;
 }
 
-/* line 52, ../sass/app.scss */
+/* line 50, ../sass/app.scss */
+a.th {
+  max-width: 100%;
+  height: auto;
+  background-color: #f2f2f2;
+  border: 0;
+  box-shadow: none;
+  text-align: center;
+}
+/* line 56, ../sass/app.scss */
+a.th > img {
+  width: 100%;
+  height: auto;
+  border: solid 4px white;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+/* line 64, ../sass/app.scss */
 header#header {
   position: static;
   width: 100%;
@@ -10029,8 +10046,8 @@ header#header {
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 57, ../sass/app.scss */
-header#header hgroup {
+/* line 72, ../sass/app.scss */
+header#header > hgroup#branding {
   height: 200px;
   min-height: 200px;
   max-height: 200px;
@@ -10039,21 +10056,21 @@ header#header hgroup {
   padding-top: 0;
   padding-bottom: 0;
 }
-/* line 62, ../sass/app.scss */
-header#header hgroup > h1#site-title {
+/* line 80, ../sass/app.scss */
+header#header > hgroup#branding > h1#site-title {
   display: none;
 }
-/* line 63, ../sass/app.scss */
-header#header hgroup > h1#site-title a {
+/* line 82, ../sass/app.scss */
+header#header > hgroup#branding > h1#site-title a {
   color: #333333;
 }
-/* line 65, ../sass/app.scss */
-header#header hgroup > h2#site-description {
+/* line 84, ../sass/app.scss */
+header#header > hgroup#branding > h2#site-description {
   display: none;
   color: #7a7a7a;
 }
-/* line 67, ../sass/app.scss */
-header#header img {
+/* line 89, ../sass/app.scss */
+header#header > img#header {
   position: relative;
   z-index: -1;
   float: left;
