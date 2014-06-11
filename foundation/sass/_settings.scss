@@ -31,10 +31,17 @@ $body-font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-s
 // $text-direction: rtl;
 
 // We use these as default colors throughout
-// $primary-color: #2ba6cb;     <== Overridden via Theme customizer
-$primary-color: #1a4f4c;    // "Cyprus"
-// $secondary-color: #e9e9e9;   <== Overridden via Theme customizer
-$secondary-color: #ffed38; // "Golden Fizz" (Pantone 803)
+// $primary-color: #2ba6cb; <== Overridden via Theme customizer
+$primary-color: #1a4f4c; // Cyprus (Logo colour)
+
+// $secondary-color: #e9e9e9; <== Overridden via Theme customizer
+// $secondary-color: #ffed38; // Golden Fizz (Pantone 803)
+// $secondary-color: #F7CB00; // Mango
+// $secondary-color: #F8CD39; // Mellow Orange
+// $secondary-color: #FFD800; // Circus 394
+// $secondary-color: #FFD33C; // Taking Over
+$secondary-color: #FFE559; // Sahara
+
 // $alert-color: #c60f13;
 // $success-color: #5da423;
 
@@ -207,9 +214,9 @@ $microformat-border-width: 0px;
 // $input-font-color: rgba(0,0,0,0.75);
 // $input-font-size: emCalc(14px);
 // $input-bg-color: #fff;
-$input-bg-color: darken($body-bg, 5%);
+$input-bg-color: darken($body-bg, 2%);
 // $input-focus-bg-color: darken(#fff, 2%);
-$input-focus-bg-color: lighten($body-bg, 5%);
+$input-focus-bg-color: lighten($body-bg, 2%);
 // $input-border-color: darken(#fff, 20%);
 // $input-focus-border-color: darken(#fff, 40%);
 // $input-border-style: solid;
@@ -1103,3 +1110,6 @@ $menubar-menu-icon-color: $primary-color;
 //
 
 $header-height: 200px;
+$article-border-color: #ccc;
+$footer-font-color: #999;
+$footer-font-size: 80%;

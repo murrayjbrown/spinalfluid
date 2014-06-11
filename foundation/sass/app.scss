@@ -96,3 +96,23 @@ header#header {
         padding: 0;
     }
 }
+
+// Footer
+footer#footer {
+    .footer-content {
+        .credit {
+            font-size: $footer-font-size;
+            font-color: $footer-font-color;
+        }
+    }
+}
+
+// Article
+Article {
+     border-bottom: solid 1px $article-border-color;
+     margin-bottom: .5rem;
+     margin-top: .5rem;
+     padding-bottom: .3rem;
+     padding-top: .3rem;
+}
+
