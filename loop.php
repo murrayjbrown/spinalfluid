@@ -6,7 +6,8 @@
 
         <?php
               /* Update when Hybrid Core 1.6 is released. This function will no longer be available. */
-              spine2_get_content_template(); // Loads the content template.
+              //spine2_get_content_template(); // Loads the content template. //SUPERCEDED (mjbrown)
+              hybrid_get_content_template(); // Loads the content template.
         ?>
 
         <?php if ( is_singular() ) { ?>

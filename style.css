@@ -16,7 +16,7 @@ Original Theme URI: http://spine.paulwp.com
 Original Author: Paul de Wouters
 Original Author URI: http://paulwp.com/
 */
-@import url("https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Source+Sans+Pro|Source+Code+Pro|Dosis");
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans|Source+Code+Pro|Dosis");
 /* line 324, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.2.3/";
@@ -80,10 +80,10 @@ body {
 /* line 373, ../bower_components/foundation/scss/foundation/components/_global.scss */
 body {
   background: #f2f2f2;
-  color: #444444;
+  color: #333333;
   padding: 0;
   margin: 0;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -1618,7 +1618,7 @@ select {
   color: #222222;
   padding: 1rem;
   display: block;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
 }
 /* line 39, ../bower_components/foundation/scss/foundation/components/_accordion.scss */
@@ -2318,7 +2318,7 @@ button, .button, input[type="submit"] {
   border-style: solid;
   border-width: 0px;
   cursor: pointer;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -4070,7 +4070,7 @@ kbd {
 /* line 91, ../bower_components/foundation/scss/foundation/components/_labels.scss */
 .label {
   font-weight: normal;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
   text-decoration: none;
   line-height: 1;
@@ -4698,7 +4698,7 @@ ul.pagination li, ul.page-numbers li {
   color: #eeeeee;
   font-weight: normal;
   font-size: 1rem;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 143, ../bower_components/foundation/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .price {
@@ -4708,7 +4708,7 @@ ul.pagination li, ul.page-numbers li {
   color: #333333;
   font-weight: normal;
   font-size: 2rem;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 144, ../bower_components/foundation/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .description {
@@ -5048,7 +5048,7 @@ dialog[open] {
   padding: 0.875rem 0;
   list-style-type: none;
   list-style-position: inside;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 70, ../bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li {
@@ -5071,7 +5071,7 @@ dialog[open] {
 .side-nav li.active > a:first-child:not(.button) {
   color: #38aaa4;
   font-weight: normal;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 92, ../bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li.divider {
@@ -5239,7 +5239,7 @@ dialog[open] {
   display: inline;
   margin-left: 1rem;
   margin-bottom: 0.625rem;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 0.875rem;
   color: #999999;
@@ -5823,7 +5823,7 @@ p {
   font-family: inherit;
   font-weight: normal;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.4;
   margin-bottom: 1.25rem;
   text-rendering: optimizeLegibility;
 }
@@ -5834,18 +5834,18 @@ p.lead {
 }
 /* line 239, ../bower_components/foundation/scss/foundation/components/_type.scss */
 p aside {
-  font-size: 0.875rem;
-  line-height: 1.35;
-  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.4;
+  font-style: normal;
 }
 
 /* Default header styles */
 /* line 247, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Gentium Book Basic", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-family: "Merriweather", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
   font-weight: normal;
   font-style: normal;
-  color: #333333;
+  color: #555555;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -5854,7 +5854,7 @@ h1, h2, h3, h4, h5, h6 {
 /* line 257, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
-  color: #7a7a7a;
+  color: #a2a2a2;
   line-height: 0;
 }
 
@@ -5891,7 +5891,7 @@ h6 {
 /* line 271, ../bower_components/foundation/scss/foundation/components/_type.scss */
 .subheader {
   line-height: 1.4;
-  color: #7a7a7a;
+  color: #909090;
   font-weight: normal;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -5940,7 +5940,7 @@ ul,
 ol,
 dl {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.4;
   margin-bottom: 1.25rem;
   list-style-position: outside;
   font-family: inherit;
@@ -6022,7 +6022,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #444444;
+  color: #333333;
   border-bottom: 1px dotted #dddddd;
   cursor: help;
 }
@@ -6043,7 +6043,7 @@ blockquote {
 blockquote cite {
   display: block;
   font-size: 0.8125rem;
-  color: #626262;
+  color: #7c7c7c;
 }
 /* line 396, ../bower_components/foundation/scss/foundation/components/_type.scss */
 blockquote cite:before {
@@ -6052,14 +6052,14 @@ blockquote cite:before {
 /* line 401, ../bower_components/foundation/scss/foundation/components/_type.scss */
 blockquote cite a,
 blockquote cite a:visited {
-  color: #626262;
+  color: #7c7c7c;
 }
 
 /* line 407, ../bower_components/foundation/scss/foundation/components/_type.scss */
 blockquote,
 blockquote p {
-  line-height: 1.6;
-  color: #7a7a7a;
+  line-height: 1.4;
+  color: #909090;
 }
 
 /* Microformats */
@@ -6253,7 +6253,7 @@ blockquote p {
   background: #efefef;
   color: #222222;
   padding: 1rem 2rem;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
 }
 /* line 47, ../bower_components/foundation/scss/foundation/components/_tabs.scss */
@@ -6679,7 +6679,7 @@ meta.foundation-mq-topbar {
   color: #1a4f4c;
   padding: 12px 0 12px 0;
   padding-left: 15px;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: bolder;
   text-transform: none;
@@ -7075,12 +7075,12 @@ meta.foundation-mq-topbar {
     line-height: 45px;
     white-space: nowrap;
     padding: 12px 15px;
-    background: #ffe559;
+    background: white;
   }
   /* line 560, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section .dropdown li:not(.has-form) a:not(.button) {
     color: #1a4f4c;
-    background: #ffe559;
+    background: white;
   }
   /* line 564, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section .dropdown li:not(.has-form):hover > a:not(.button) {
@@ -8214,7 +8214,7 @@ meta.foundation-mq-menubar {
   color: #1a4f4c;
   padding: 12px 0 12px 0;
   padding-left: 15px;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: bolder;
   text-transform: none;
@@ -9995,9 +9995,14 @@ a.th {
   margin-bottom: 1em;
 }
 
-/* line 41, ../sass/app.scss */
+/* line 35, ../sass/app.scss */
 body {
   background-color: #f2f2f2;
+}
+
+/* line 36, ../sass/app.scss */
+h3, h5 {
+  font-style: italic;
 }
 
 /* line 42, ../sass/app.scss */
@@ -10006,20 +10011,21 @@ body {
 }
 /* line 43, ../sass/app.scss */
 .panel > h1, .sticky > h1, .panel h2, .sticky h2, .panel h3, .sticky h3, .panel h4, .sticky h4, .panel h5, .sticky h5, .panel h6, .sticky h6 {
-  color: #666666;
+  color: #888888;
 }
 
-/* line 47, ../sass/app.scss */
+/* line 50, ../sass/app.scss */
 a {
   color: #1a4f4c;
 }
-/* line 48, ../sass/app.scss */
+/* line 51, ../sass/app.scss */
 a:hover {
   background-color: #ffe559;
   text-decoration: underline;
 }
 
-/* line 50, ../sass/app.scss */
+/* Thumbnail image link */
+/* line 55, ../sass/app.scss */
 a.th {
   max-width: 100%;
   height: auto;
@@ -10028,7 +10034,7 @@ a.th {
   box-shadow: none;
   text-align: center;
 }
-/* line 56, ../sass/app.scss */
+/* line 61, ../sass/app.scss */
 a.th > img {
   width: 100%;
   height: auto;
@@ -10036,17 +10042,20 @@ a.th > img {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
-/* line 64, ../sass/app.scss */
+/* line 72, ../sass/app.scss */
 header#header {
   position: static;
+  z-index: -1;
   width: 100%;
   height: 200px;
   min-height: 200px;
   max-height: 200px;
+  background-color: #ffe559;
+  border-bottom: solid 0px #1a4f4c;
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 72, ../sass/app.scss */
+/* line 83, ../sass/app.scss */
 header#header > hgroup#branding {
   height: 200px;
   min-height: 200px;
@@ -10056,23 +10065,27 @@ header#header > hgroup#branding {
   padding-top: 0;
   padding-bottom: 0;
 }
-/* line 80, ../sass/app.scss */
+/* line 91, ../sass/app.scss */
 header#header > hgroup#branding > h1#site-title {
   display: none;
+  postion: relative;
+  z-index: 100;
 }
-/* line 82, ../sass/app.scss */
+/* line 95, ../sass/app.scss */
 header#header > hgroup#branding > h1#site-title a {
-  color: #333333;
+  color: #555555;
 }
-/* line 84, ../sass/app.scss */
+/* line 97, ../sass/app.scss */
 header#header > hgroup#branding > h2#site-description {
   display: none;
-  color: #7a7a7a;
+  postion: relative;
+  z-index: 100;
+  color: #909090;
 }
-/* line 89, ../sass/app.scss */
+/* line 104, ../sass/app.scss */
 header#header > img#header {
   position: relative;
-  z-index: -1;
+  z-index: 1;
   float: left;
   width: auto;
   height: 100%;
@@ -10080,17 +10093,108 @@ header#header > img#header {
   padding: 0;
 }
 
-/* line 103, ../sass/app.scss */
-footer#footer .footer-content .credit {
-  font-size: 80%;
-  font-color: #999999;
+/* line 119, ../sass/app.scss */
+article {
+  border-bottom: solid 1px #1a4f4c;
+  margin-top: .5em;
+  margin-bottom: 0;
+  padding-top: .3em;
+  padding-bottom: .5em;
+}
+/* line 126, ../sass/app.scss */
+article ol {
+  margin-top: 0em;
+}
+/* line 129, ../sass/app.scss */
+article ol.comment-list li.comment {
+  background-color: #eaeaea;
+}
+/* line 132, ../sass/app.scss */
+article ul {
+  margin-top: 0em;
+}
+/* line 136, ../sass/app.scss */
+article p + ol,
+article p + ul {
+  margin-top: -1.5em;
 }
 
-/* line 111, ../sass/app.scss */
-Article {
-  border-bottom: solid 1px #cccccc;
-  margin-bottom: .5rem;
-  margin-top: .5rem;
-  padding-bottom: .3rem;
-  padding-top: .3rem;
+/* line 146, ../sass/app.scss */
+article.format-aside.article-list-item .entry-header,
+article.format-quote.article-list-item .entry-header,
+article.format-status.article-list-item .entry-header {
+  display: none;
+}
+
+/* line 151, ../sass/app.scss */
+article.format-aside .entry-content {
+  /* background-color: lighten($secondary-color, 25%); */
+  background-color: #f7f7f7;
+  border-bottom: solid 0px #1a4f4c;
+  box-shadow: 0 0 0 2px rgba(127, 127, 127, 0.2);
+  font-family: "Dosis", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.4;
+  margin-top: .8em;
+  margin-bottom: 1.6em;
+  padding-top: .8em;
+  padding-bottom: .8em;
+}
+/* line 164, ../sass/app.scss */
+article.format-aside .entry-content p {
+  margin-top: 0;
+  margin-left: .5em;
+  margin-right: .5em;
+  margin-bottom: 0;
+}
+/* line 170, ../sass/app.scss */
+article.format-aside .entry-content p + p {
+  margin-top: -0.7;
+}
+/* line 174, ../sass/app.scss */
+article.format-aside.article-list-item .entry-content {
+  margin-top: 0;
+  margin-bottom: 1.2em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+/* line 186, ../sass/app.scss */
+article.format-image img,
+article.format-gallery img {
+  width: 100%;
+  height: auto;
+  border: solid 4px white;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+/* line 191, ../sass/app.scss */
+article.format-image p.image-count,
+article.format-gallery p.image-count {
+  font-style: italic;
+}
+
+/* line 194, ../sass/app.scss */
+blockquote {
+  font-style: italic;
+}
+
+/* line 197, ../sass/app.scss */
+.entry-byline,
+.entry-footer {
+  font-size: 0.85rem;
+  font-color: #a2a2a2;
+}
+
+/* line 202, ../sass/app.scss */
+.loop-nav {
+  border-bottom: solid 1px #1a4f4c;
+  margin-bottom: .5em;
+  padding-bottom: .3em;
+}
+
+/* line 212, ../sass/app.scss */
+.footer-content .credit {
+  font-size: 0.8rem;
+  font-color: #999999;
 }

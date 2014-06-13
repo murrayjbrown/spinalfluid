@@ -33,7 +33,8 @@ require_once( trailingslashit( get_template_directory() ) . 'hybrid-core/hybrid.
 new Hybrid();
 
 /* Do theme setup on the 'after_setup_theme' hook. */
-add_action( 'after_setup_theme', 'spine2_theme_setup' );
+// add_action( 'after_setup_theme', 'spine2_theme_setup' ); // SUPERCEDED (mjbrown) for SpinalFluid
+add_action( 'after_setup_theme', 'spinalfluid_theme_setup' );
 
 /**
  * Theme setup function.  This function adds support for theme features and defines the default theme
@@ -43,7 +44,8 @@ add_action( 'after_setup_theme', 'spine2_theme_setup' );
  * @access public
  * @return void
  */
-function spine2_theme_setup() {
+//function spine2_theme_setup() { // SUPERCEDED (mjbrown) for SpinalFluid
+function spinalfluid_theme_setup() {
 
     /** Theme constants */
     define ( 'SPINE2_JS_URL', trailingslashit( get_template_directory_uri() . '/js' ) );
@@ -63,11 +65,9 @@ function spine2_theme_setup() {
     // Load Customizer settings
     include_once SPINE2_INC_DIR . 'spine-customizer.php';
 
-    include_once SPINE2_INC_DIR . 'gallery-shortcode.php';
+    //include_once SPINE2_INC_DIR . 'gallery-shortcode.php'; //DISABLED (mjbrown)
 
-    /* DISABLED (mjbrown)
-    include_once SPINE2_INC_DIR . 'meta.php';
-    //DISABLED */
+    //include_once SPINE2_INC_DIR . 'meta.php'; //DISABLED (mjbrown)
 
     add_action( 'customize_register', 'spine2_customize_register' );
 
@@ -133,7 +133,7 @@ function spine2_theme_setup() {
     //add_theme_support( 'breadcrumb-trail' );
 
     /* Nicer [gallery] shortcode implementation. */
-    //add_theme_support( 'cleaner-gallery' );
+    //add_theme_support( 'cleaner-gallery' ); //DISABLE (mjbrown)
 
     /* Better captions for themes to style. */
     //add_theme_support( 'cleaner-caption' );
@@ -168,6 +168,10 @@ function spine2_theme_setup() {
         array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' )
     );
 
+    /** Add filters for custom post excerpt handling */
+    add_filter( 'excerpt_length', 'spinalfluid_excerpt_length', 199 );
+    add_filter( 'excerpt_more', 'spine2_new_excerpt_more' );
+
     /** Add theme settings */
     add_theme_support( 'hybrid-core-theme-settings', array( 'about', 'footer' ) );
 
@@ -176,8 +180,8 @@ function spine2_theme_setup() {
 
     /** Hybrid Core 1.6 changes **/
     add_filter( "{$prefix}_sidebar_defaults", 'spine2_sidebar_defaults', 15, 2 );
-    //add_filter( 'cleaner_gallery_defaults', 'spine2_gallery_defaults' );
-    add_filter( 'the_content', 'spine2_aside_infinity', 9 );
+    //add_filter( 'cleaner_gallery_defaults', 'spine2_gallery_defaults' ); //DISABLED (mjbrown)
+    //add_filter( 'the_content', 'spine2_aside_infinity', 9 ); // DISABLED (mjbrown)
     /****************************/
 
     // load the stylesheet
@@ -205,11 +209,24 @@ function spine2_theme_setup() {
     add_filter( 'get_the_image', 'spine2_add_featured_img_class', 10, 1 );
 }
 
+
+/**
+ * This function adds support for a custom post excerpt length.
+ *
+ * @since  0.1.0
+ * @access public
+ * @return void
+ */
+function spinalfluid_excerpt_length( $length ) {
+    return 120;
+}
+
+
 /* === HYBRID CORE 1.6 CHANGES. ===
  *
  * The following changes are slated for Hybrid Core version 1.6 to make it easier for
- * theme developers to build awesome HTML5 themes. The code will be removed once 1.6
- * is released.
+ * theme developers to build awesome HTML5 themes. The code will be removed (or revised)
+ * once 1.6 is released.
  */
 
 /**
@@ -220,6 +237,7 @@ function spine2_theme_setup() {
  * @access public
  * @return void
  */
+/* DISABLED (mjbrown)
 function spine2_get_content_template() {
 
     $templates = array();
@@ -238,6 +256,7 @@ function spine2_get_content_template() {
 
     return locate_template( $templates, true, false );
 }
+*/
 
 /**
  * Sidebar parameter defaults.
@@ -281,6 +300,7 @@ function spine2_sidebar_defaults( $defaults, $sidebar ) {
  *
  * @return array
  */
+/* DISABLED(mjbrown)
 function spine2_gallery_defaults( $defaults ) {
 
     $defaults['itemtag']    = 'figure';
@@ -289,6 +309,7 @@ function spine2_gallery_defaults( $defaults ) {
 
     return $defaults;
 }
+*/
 
 /**
  * Adds an infinity character "&#8734;" to the end of the post content on 'aside' posts.  This
@@ -301,6 +322,7 @@ function spine2_gallery_defaults( $defaults ) {
  *
  * @return string $content
  */
+/* DISABLED (mjbrown)
 function spine2_aside_infinity( $content ) {
 
     if ( has_post_format( 'aside' ) && ! is_singular() )
@@ -308,6 +330,7 @@ function spine2_aside_infinity( $content ) {
 
     return $content;
 }
+*/
 
 /* End Hybrid Core 1.6 section. */
 
@@ -505,9 +528,10 @@ function spine2_theme_mod_header_image( $url ) {
 // Replaces the excerpt "more" text by a link
 function spine2_new_excerpt_more($more) {
     global $post;
-    return '<a class="moretag" href="'. get_permalink($post->ID) . '"> Read the full article...</a>';
+    //return '<a class="moretag" href="'. get_permalink($post->ID) . '"> Read the full article...</a>';
+    return ' <span style="white-space:nowrap;"><a class="moretag" href="'. get_permalink($post->ID) . '">&hellip;more&raquo;</a>&nbsp;<a class="moretag" href="'. get_permalink($post->ID) . '">&#8734;</a></span>';
 }
-add_filter('excerpt_more', 'spine2_new_excerpt_more');
+//add_filter('excerpt_more', 'spine2_new_excerpt_more'); // MOVED/DISABLED (mjbrown)
 
 /**
  * Disables sidebars if viewing a one-column page.
