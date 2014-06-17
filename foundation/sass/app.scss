@@ -117,9 +117,10 @@ header#header {
 //
 
 article {
-    border-bottom: solid 1px $article-border-color;
-    margin-top: .5em;
-    margin-bottom: 0;
+    background-color: $article-bg-color;
+    border-bottom: solid 2px $article-border-color;
+    margin-top: 0em;
+    margin-bottom: 1.6em;
     padding-top: .3em;
     padding-bottom: .5em;
 
@@ -189,6 +190,10 @@ article.format-gallery {
         box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
     }
     p.image-count { font-style: italic; }
+}
+
+article.format-video {
+    .entry-footer .entry-meta { margin-top: 1em; }
 }
 
 blockquote { font-style: $blockquote-font-style; }

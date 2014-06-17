@@ -79,7 +79,7 @@ body {
 
 /* line 373, ../bower_components/foundation/scss/foundation/components/_global.scss */
 body {
-  background: #f2f2f2;
+  background: #efefef;
   color: #333333;
   padding: 0;
   margin: 0;
@@ -3567,7 +3567,7 @@ input[type="time"],
 input[type="url"],
 textarea {
   -webkit-appearance: none;
-  background-color: #ededed;
+  background-color: #eaeaea;
   font-family: inherit;
   border: 1px solid #cccccc;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -3616,7 +3616,7 @@ input[type="tel"]:focus,
 input[type="time"]:focus,
 input[type="url"]:focus,
 textarea:focus {
-  background: #f7f7f7;
+  background: #f4f4f4;
   border-color: #999999;
   outline: none;
 }
@@ -9997,7 +9997,7 @@ a.th {
 
 /* line 35, ../sass/app.scss */
 body {
-  background-color: #f2f2f2;
+  background-color: #efefef;
 }
 
 /* line 36, ../sass/app.scss */
@@ -10007,7 +10007,7 @@ h3, h5 {
 
 /* line 42, ../sass/app.scss */
 .panel, .sticky {
-  background-color: #ededed;
+  background-color: #eaeaea;
 }
 /* line 43, ../sass/app.scss */
 .panel > h1, .sticky > h1, .panel h2, .sticky h2, .panel h3, .sticky h3, .panel h4, .sticky h4, .panel h5, .sticky h5, .panel h6, .sticky h6 {
@@ -10029,7 +10029,7 @@ a:hover {
 a.th {
   max-width: 100%;
   height: auto;
-  background-color: #f2f2f2;
+  background-color: #efefef;
   border: 0;
   box-shadow: none;
   text-align: center;
@@ -10095,38 +10095,39 @@ header#header > img#header {
 
 /* line 119, ../sass/app.scss */
 article {
-  border-bottom: solid 1px #1a4f4c;
-  margin-top: .5em;
-  margin-bottom: 0;
+  background-color: #efefef;
+  border-bottom: solid 2px #1a4f4c;
+  margin-top: 0em;
+  margin-bottom: 1.6em;
   padding-top: .3em;
   padding-bottom: .5em;
 }
-/* line 126, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 article ol {
   margin-top: 0em;
 }
-/* line 129, ../sass/app.scss */
+/* line 130, ../sass/app.scss */
 article ol.comment-list li.comment {
-  background-color: #eaeaea;
+  background-color: #e7e7e7;
 }
-/* line 132, ../sass/app.scss */
+/* line 133, ../sass/app.scss */
 article ul {
   margin-top: 0em;
 }
-/* line 136, ../sass/app.scss */
+/* line 137, ../sass/app.scss */
 article p + ol,
 article p + ul {
   margin-top: -1.5em;
 }
 
-/* line 146, ../sass/app.scss */
+/* line 147, ../sass/app.scss */
 article.format-aside.article-list-item .entry-header,
 article.format-quote.article-list-item .entry-header,
 article.format-status.article-list-item .entry-header {
   display: none;
 }
 
-/* line 151, ../sass/app.scss */
+/* line 152, ../sass/app.scss */
 article.format-aside .entry-content {
   /* background-color: lighten($secondary-color, 25%); */
   background-color: #f7f7f7;
@@ -10141,18 +10142,18 @@ article.format-aside .entry-content {
   padding-top: .8em;
   padding-bottom: .8em;
 }
-/* line 164, ../sass/app.scss */
+/* line 165, ../sass/app.scss */
 article.format-aside .entry-content p {
   margin-top: 0;
   margin-left: .5em;
   margin-right: .5em;
   margin-bottom: 0;
 }
-/* line 170, ../sass/app.scss */
+/* line 171, ../sass/app.scss */
 article.format-aside .entry-content p + p {
   margin-top: -0.7;
 }
-/* line 174, ../sass/app.scss */
+/* line 175, ../sass/app.scss */
 article.format-aside.article-list-item .entry-content {
   margin-top: 0;
   margin-bottom: 1.2em;
@@ -10160,7 +10161,7 @@ article.format-aside.article-list-item .entry-content {
   padding-bottom: .5em;
 }
 
-/* line 186, ../sass/app.scss */
+/* line 187, ../sass/app.scss */
 article.format-image img,
 article.format-gallery img {
   width: 100%;
@@ -10168,32 +10169,37 @@ article.format-gallery img {
   border: solid 4px white;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
-/* line 191, ../sass/app.scss */
+/* line 192, ../sass/app.scss */
 article.format-image p.image-count,
 article.format-gallery p.image-count {
   font-style: italic;
 }
 
-/* line 194, ../sass/app.scss */
+/* line 196, ../sass/app.scss */
+article.format-video .entry-footer .entry-meta {
+  margin-top: 1em;
+}
+
+/* line 199, ../sass/app.scss */
 blockquote {
   font-style: italic;
 }
 
-/* line 197, ../sass/app.scss */
+/* line 202, ../sass/app.scss */
 .entry-byline,
 .entry-footer {
   font-size: 0.85rem;
   font-color: #a2a2a2;
 }
 
-/* line 202, ../sass/app.scss */
+/* line 207, ../sass/app.scss */
 .loop-nav {
   border-bottom: solid 1px #1a4f4c;
   margin-bottom: .5em;
   padding-bottom: .3em;
 }
 
-/* line 212, ../sass/app.scss */
+/* line 217, ../sass/app.scss */
 .footer-content .credit {
   font-size: 0.8rem;
   font-color: #999999;

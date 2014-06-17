@@ -354,6 +354,9 @@ function spine2_load_scripts() {
     /** This is the main javascript file */
     //wp_deregister_script('jquery');
     //wp_enqueue_script( 'jquery', SPINE2_VENDOR_JS_URL . 'jquery.js', array(), SPINE2_VERSION, true );
+
+    wp_enqueue_script( 'media-audiovideo' ); // Added support for WP audio player (mjbrown)
+
     wp_enqueue_script( 'foundation-app', SPINE2_FOUNDATION_JS_URL . 'foundation.js', array( 'jquery' ), SPINE2_VERSION, true );
     wp_enqueue_script( 'foundation-topbar', SPINE2_FOUNDATION_JS_URL . 'foundation.topbar.js', array( 'jquery', 'foundation-app' ), SPINE2_VERSION, true );
     wp_enqueue_script( 'foundation-section', SPINE2_FOUNDATION_JS_URL . 'foundation.section.js', array( 'jquery', 'foundation-app' ), SPINE2_VERSION, true );

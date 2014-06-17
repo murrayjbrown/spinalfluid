@@ -20,7 +20,7 @@
 // $em-base: 16px;
 
 // We use these to control various global styles
-$body-bg: #f2f2f2;
+$body-bg: #efefef;
 // $body-font-color: #222;
 $body-font-color: #333;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -1134,6 +1134,7 @@ $menubar-menu-icon-color: $primary-color;
 //
 
 $header-height: 120px;
+$article-bg-color: $body-bg;
 $article-border-color: $primary-color;
 $footer-font-color: #999;
 $footer-font-size: .8rem;

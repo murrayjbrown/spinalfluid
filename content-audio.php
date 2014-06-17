@@ -1,46 +1,50 @@
-<article id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class(); ?>">
+<article id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class();
+    if( !is_singular( get_post_type() )) : echo ' article-list-item';
+    endif;?>">
 
-	<?php if ( is_singular( get_post_type() ) ) { ?>
+    <?php if ( is_singular( get_post_type() ) ) { ?>
 
-		<header class="entry-header">
-			<h1 class="entry-title"><?php single_post_title(); ?></h1>
-			<?php echo apply_atomic_shortcode( 'entry_byline', '<div class="entry-byline">' . __( '[post-format-link] file published on [entry-published] [entry-comments-link before=" | "] [entry-edit-link before="| "]', 'spinalfluid' ) . '</div>' ); ?>
-		</header><!-- .entry-header -->
+        <header class="entry-header">
+            <h1 class="entry-title"><?php single_post_title(); ?></h1>
+            <?php echo apply_atomic_shortcode( 'entry_byline', '<div class="entry-byline">' . __( '[post-format-link] file published on [entry-published] [entry-comments-link before=" | "] [entry-edit-link before="| "]', 'spinalfluid' ) . '</div>' ); ?>
+        </header><!-- .entry-header -->
 
-		<div class="entry-content">
-			<?php the_content(); ?>
-			<?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'spinalfluid' ) . '</span>', 'after' => '</p>' ) ); ?>
-		</div><!-- .entry-content -->
+        <div class="entry-content">
+            <?php the_content(); ?>
+            <?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'spinalfluid' ) . '</span>', 'after' => '</p>' ) ); ?>
+        </div><!-- .entry-content -->
 
-		<footer class="entry-footer">
-			<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[entry-terms taxonomy="category" before="Posted in "] [entry-terms before="Tagged "]', 'spinalfluid' ) . '</div>' ); ?>
-		</footer><!-- .entry-footer -->
+        <footer class="entry-footer">
+            <?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[entry-terms taxonomy="category" before="Posted in "] [entry-terms before="Tagged "]', 'spinalfluid' ) . '</div>' ); ?>
+        </footer><!-- .entry-footer -->
 
-	<?php } else { ?>
+    <?php } else { ?>
 
-		<header class="entry-header">
-			<?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '">', '</a></h2>' ); ?>
-		</header><!-- .entry-header -->
+        <header class="entry-header">
+            <?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '">', '</a></h2>' ); ?>
+        </header><!-- .entry-header -->
 
-		<?php if ( has_excerpt() ) { ?>
+        <?php // echo ( $video = hybrid_audio_attachment() ); // (mjbrown) ?>
 
-			<div class="entry-summary">
-				<?php the_excerpt(); ?>
-			</div><!-- .entry-summary -->
+        <?php if ( has_excerpt() ) { ?>
 
-		<?php } else { ?>
+            <div class="entry-summary">
+                <?php the_excerpt(); ?>
+            </div><!-- .entry-summary -->
 
-			<div class="entry-content">
-				<?php the_content( __( 'Read more &rarr;', 'spinalfluid' ) ); ?>
-				<?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'spinalfluid' ) . '</span>', 'after' => '</p>' ) ); ?>
-			</div><!-- .entry-content -->
+        <?php } else { ?>
 
-		<?php } ?>
+            <div class="entry-content">
+                <?php the_content( __( 'Read more &rarr;', 'spinalfluid' ) ); ?>
+                <?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'spinalfluid' ) . '</span>', 'after' => '</p>' ) ); ?>
+            </div><!-- .entry-content -->
 
-		<footer class="entry-footer">
-			<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[post-format-link] file published on [entry-published] [entry-comments-link before="| "] [entry-edit-link before="| "]', 'spinalfluid' ) . '</div>' ); ?>
-		</footer>
+        <?php } ?>
 
-	<?php } ?>
+        <footer class="entry-footer">
+            <?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[post-format-link] file published on [entry-published] [entry-comments-link before="| "] [entry-edit-link before="| "]', 'spinalfluid' ) . '</div>' ); ?>
+        </footer>
+
+    <?php } ?>
 
 </article><!-- .hentry -->
