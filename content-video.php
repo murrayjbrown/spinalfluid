@@ -35,7 +35,8 @@
         <?php } elseif ( empty( $video ) ) { ?>
 
             <div class="entry-content">
-                <?php the_content( __( 'Read more &rarr;', 'spinalfluid' ) ); ?>
+                <?php // the_content( __( 'Read more &rarr;', 'spinalfluid' ) ); //SUPERCEDED (mjbrown)
+                the_content( __( '<span style="white-space:nowrap;">…more&nbsp;&raquo;</span>', 'spinalfluid' ) ); ?>
                 <?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'spinalfluid' ) . '</span>', 'after' => '</p>' ) ); ?>
             </div><!-- .entry-content -->
 
