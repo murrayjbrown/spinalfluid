@@ -16,7 +16,7 @@ Original Theme URI: http://spine.paulwp.com
 Original Author: Paul de Wouters
 Original Author URI: http://paulwp.com/
 */
-@import url("https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans|Source+Code+Pro|Dosis");
+@import url("https://fonts.googleapis.com/css?family=Alice|Lato|Source+Code+Pro|Dosis");
 /* line 324, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.2.3/";
@@ -83,7 +83,7 @@ body {
   color: #333333;
   padding: 0;
   margin: 0;
-  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -1618,7 +1618,7 @@ select {
   color: #222222;
   padding: 1rem;
   display: block;
-  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
 }
 /* line 39, ../bower_components/foundation/scss/foundation/components/_accordion.scss */
@@ -2318,7 +2318,7 @@ button, .button, input[type="submit"] {
   border-style: solid;
   border-width: 0px;
   cursor: pointer;
-  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -4070,7 +4070,7 @@ kbd {
 /* line 91, ../bower_components/foundation/scss/foundation/components/_labels.scss */
 .label {
   font-weight: normal;
-  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
   text-decoration: none;
   line-height: 1;
@@ -4698,7 +4698,7 @@ ul.pagination li, ul.page-numbers li {
   color: #eeeeee;
   font-weight: normal;
   font-size: 1rem;
-  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 143, ../bower_components/foundation/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .price {
@@ -4708,7 +4708,7 @@ ul.pagination li, ul.page-numbers li {
   color: #333333;
   font-weight: normal;
   font-size: 2rem;
-  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 144, ../bower_components/foundation/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .description {
@@ -5048,7 +5048,7 @@ dialog[open] {
   padding: 0.875rem 0;
   list-style-type: none;
   list-style-position: inside;
-  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 70, ../bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li {
@@ -5071,7 +5071,7 @@ dialog[open] {
 .side-nav li.active > a:first-child:not(.button) {
   color: #38aaa4;
   font-weight: normal;
-  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 92, ../bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li.divider {
@@ -5239,7 +5239,7 @@ dialog[open] {
   display: inline;
   margin-left: 1rem;
   margin-bottom: 0.625rem;
-  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 0.875rem;
   color: #999999;
@@ -5842,7 +5842,7 @@ p aside {
 /* Default header styles */
 /* line 247, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Merriweather", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-family: "Alice", "Georgia", serif;
   font-weight: normal;
   font-style: normal;
   color: #555555;
@@ -5860,32 +5860,32 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 
 /* line 264, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1 {
-  font-size: 2.125rem;
+  font-size: 2.375rem;
 }
 
 /* line 265, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h2 {
-  font-size: 1.6875rem;
+  font-size: 2rem;
 }
 
 /* line 266, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h3 {
-  font-size: 1.375rem;
+  font-size: 1.6875rem;
 }
 
 /* line 267, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h4 {
-  font-size: 1.125rem;
+  font-size: 1.4375rem;
 }
 
 /* line 268, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h5 {
-  font-size: 1.125rem;
+  font-size: 1.4375rem;
 }
 
 /* line 269, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h6 {
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 /* line 271, ../bower_components/foundation/scss/foundation/components/_type.scss */
@@ -6102,22 +6102,22 @@ blockquote p {
 
   /* line 444, ../bower_components/foundation/scss/foundation/components/_type.scss */
   h1 {
-    font-size: 2.75rem;
+    font-size: 3rem;
   }
 
   /* line 445, ../bower_components/foundation/scss/foundation/components/_type.scss */
   h2 {
-    font-size: 2.3125rem;
+    font-size: 2.625rem;
   }
 
   /* line 446, ../bower_components/foundation/scss/foundation/components/_type.scss */
   h3 {
-    font-size: 1.6875rem;
+    font-size: 2rem;
   }
 
   /* line 447, ../bower_components/foundation/scss/foundation/components/_type.scss */
   h4 {
-    font-size: 1.4375rem;
+    font-size: 1.75rem;
   }
 }
 /*
@@ -6253,7 +6253,7 @@ blockquote p {
   background: #efefef;
   color: #222222;
   padding: 1rem 2rem;
-  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
 }
 /* line 47, ../bower_components/foundation/scss/foundation/components/_tabs.scss */
@@ -6679,7 +6679,7 @@ meta.foundation-mq-topbar {
   color: #1a4f4c;
   padding: 12px 0 12px 0;
   padding-left: 15px;
-  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: bolder;
   text-transform: none;
@@ -7204,7 +7204,7 @@ meta.foundation-mq-topbar {
 }
 /* line 163, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
 .tab-bar h1, .tab-bar h2, .tab-bar h3, .tab-bar h4 {
-  font-size: 1.125rem;
+  font-size: 1.4375rem;
 }
 
 /* line 276, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
@@ -8214,7 +8214,7 @@ meta.foundation-mq-menubar {
   color: #1a4f4c;
   padding: 12px 0 12px 0;
   padding-left: 15px;
-  font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: bolder;
   text-transform: none;
@@ -10047,9 +10047,9 @@ header#header {
   position: static;
   z-index: -1;
   width: 100%;
-  height: 200px;
-  min-height: 200px;
-  max-height: 200px;
+  height: 120px;
+  min-height: 120px;
+  max-height: 120px;
   background-color: #ffe559;
   border-bottom: solid 0px #1a4f4c;
   margin-top: 0;
@@ -10057,9 +10057,9 @@ header#header {
 }
 /* line 83, ../sass/app.scss */
 header#header > hgroup#branding {
-  height: 200px;
-  min-height: 200px;
-  max-height: 200px;
+  height: 120px;
+  min-height: 120px;
+  max-height: 120px;
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0;
@@ -10089,7 +10089,7 @@ header#header > img#header {
   float: left;
   width: auto;
   height: 100%;
-  margin: -200px 0 0 0;
+  margin: -120px 0 0 0;
   padding: 0;
 }
 

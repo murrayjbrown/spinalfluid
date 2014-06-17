@@ -10,8 +10,8 @@
 //
 // Import Google Fonts
 //
-//@import url('https://fonts.googleapis.com/css?family=Titillium+Web|Gentium+Book+Basic|Source+Sans+Pro|Source+Code+Pro|Dosis');
-@import url('https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans|Source+Code+Pro|Dosis');
+//@import url('https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans|Titillium+Web|Gentium+Book+Basic|Source+Sans+Pro|Source+Code+Pro|Dosis');
+@import url('https://fonts.googleapis.com/css?family=Alice|Lato|Source+Code+Pro|Dosis');
 //
 // Foundation Global Variables
 //
@@ -24,7 +24,7 @@ $body-bg: #f2f2f2;
 // $body-font-color: #222;
 $body-font-color: #333;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$body-font-family: "Merriweather Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -103,7 +103,8 @@ $secondary-color: #FFE559; // Sahara
 
 // We use these to control header font styles
 // $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$header-font-family: "Merriweather", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+//$header-font-family: "Alice","Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+$header-font-family: "Alice","Georgia", serif;
 // $header-font-weight: bold;
 $header-font-weight: normal;
 // $header-font-style: normal;
@@ -116,11 +117,17 @@ $header-font-color: #555;
 
 // We use these to control header font sizes
 // $h1-font-size: emCalc(44px);
+$h1-font-size: emCalc(48px);
 // $h2-font-size: emCalc(37px);
+$h2-font-size: emCalc(42px);
 // $h3-font-size: emCalc(27px);
+$h3-font-size: emCalc(32px);
 // $h4-font-size: emCalc(23px);
+$h4-font-size: emCalc(28px);
 // $h5-font-size: emCalc(18px);
+$h5-font-size: emCalc(23px);
 // $h6-font-size: 1em;
+$h6-font-size: emCalc(18px);
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
@@ -1126,7 +1133,7 @@ $menubar-menu-icon-color: $primary-color;
 // Local Settings
 //
 
-$header-height: 200px;
+$header-height: 120px;
 $article-border-color: $primary-color;
 $footer-font-color: #999;
 $footer-font-size: .8rem;
