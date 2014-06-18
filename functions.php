@@ -199,16 +199,15 @@ function spinalfluid_theme_setup() {
     add_action('widgets_init', 'spine2_register_sidebars', 11);
 
     // Add customizer styles to frontend
-    // add_action( 'wp_head', 'spine2_wp_head' );
+    //add_action( 'wp_head', 'spine2_wp_head' );
 
     add_editor_style();
 
-    add_filter( 'sidebars_widgets', 'spine2_disable_sidebars' );
+    add_filter('sidebars_widgets', 'spine2_disable_sidebars' );
 
     //add_filter('post_thumbnail_html', 'pdw_spine_add_thumbnail_class',10, 3 );
     add_filter( 'get_the_image', 'spine2_add_featured_img_class', 10, 1 );
 }
-
 
 /**
  * This function adds support for a custom post excerpt length.
@@ -446,6 +445,8 @@ function spine2_register_sidebars(){
  * Insert customizer styles to document head
  */
 function spine2_wp_head() {
+    return;
+
     $body_color = hybrid_get_setting( 'body_color' );
     $headline_color = hybrid_get_setting( 'headline_color' );
     $link_color = hybrid_get_setting( 'link_color' );
@@ -466,6 +467,7 @@ function spine2_wp_head() {
         $output .= "a:hover { color: $link_hover_color; } ";
     }
     echo $output .= " </style>" . PHP_EOL;
+
 }
 
 add_action( 'contextual_help', 'wptuts_screen_help', 10, 3 );

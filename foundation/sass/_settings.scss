@@ -12,6 +12,8 @@
 //
 //@import url('https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans|Titillium+Web|Gentium+Book+Basic|Source+Sans+Pro|Source+Code+Pro|Dosis');
 @import url('https://fonts.googleapis.com/css?family=Alice|Lato|Source+Code+Pro|Dosis');
+
+
 //
 // Foundation Global Variables
 //
@@ -1042,18 +1044,20 @@ $topbar-link-weight: bolder;
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: #333;
-$topbar-dropdown-bg: #f2f2f2;
+$topbar-dropdown-bg: $secondary-color;
 // $topbar-dropdown-link-color: #fff;
 $topbar-dropdown-link-color: $primary-color;
 
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;
-$topbar-dropdown-toggle-color: $primary-color;
+$topbar-dropdown-toggle-color: $secondary-color;
 // $topbar-dropdown-toggle-alpha: 0.5;
 // $dropdown-label-color: #555;
 
 //$topbar-dropdown-link-bg: $topbar-bg;
-$topbar-dropdown-link-bg: lighten($secondary-color,50%);
+//$topbar-dropdown-link-bg: lighten($primary-color,10%);
+$topbar-dropdown-link-bg: $secondary-color;
+
 //$topbar-link-bg-hover: #90b2b0;
 $topbar-link-bg-hover: $primary-color;
 
@@ -1100,7 +1104,7 @@ $menubar-link-weight: bolder;
 
 // Style the main bar dropdown elements
 // $menubar-dropdown-bg: #333;
-$menubar-dropdown-bg: #f2f2f2;
+$menubar-dropdown-bg: $menubar-bg;
 // $menubar-dropdown-link-color: #fff;
 $menubar-dropdown-link-color: $primary-color;
 // $menubar-dropdown-toggle-size: 5px;
@@ -1111,7 +1115,7 @@ $menubar-dropdown-toggle-color: $primary-color;
 
 $menubar-dropdown-link-bg: $menubar-bg;
 //$menubar-link-bg-hover: #90b2b0;
-$menubar-link-bg-hover: $primary-color;
+$menubar-link-bg-hover: $secondary-color;
 
 // main menu icon styles
 // $menubar-menu-link-transform: uppercase;
@@ -1119,7 +1123,7 @@ $menubar-link-bg-hover: $primary-color;
 // $menubar-menu-link-weight: bold;
 // $menubar-menu-link-color: #fff;
 // $menubar-menu-icon-color: #fff;
-$menubar-menu-icon-color: $primary-color;
+$menubar-menu-icon-color: $menubar-bg;
 // $menubar-menu-link-color-toggled: #888;
 // $menubar-menu-icon-color-toggled: #888;
 

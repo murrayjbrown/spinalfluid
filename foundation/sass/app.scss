@@ -32,6 +32,7 @@ Original Author URI: http://paulwp.com/
 // Basic elements
 //
 
+
 body { background-color: $body-bg; }
 h3, h5 { font-style: italic; }
 
@@ -47,7 +48,7 @@ h3, h5 { font-style: italic; }
 // Links
 //
 
-a { color: $primary-color;
+a, a span { color: $primary-color;
     &:hover { background-color: $secondary-color; text-decoration: underline; }
 }
 
@@ -68,7 +69,7 @@ a.th { max-width: 100%;
 //
 // Header
 //
-
+/*
 header#header {
     position: static;
     z-index: -1;
@@ -109,6 +110,18 @@ header#header {
         height: 100%;
         margin: -$header-height 0 0 0;
         padding: 0;
+    }
+}
+*/
+
+//
+// WP Admin Bar -- special handling for mobile devices
+//
+@media screen and (max-width: 480px) {
+    body {
+        &:not(.wpadmin) {
+            div#wpadminbar { margin-top: -46px; }
+        }
     }
 }
 
@@ -220,3 +233,9 @@ blockquote { font-style: $blockquote-font-style; }
     }
 }
 
+//
+// Specific pages
+//
+
+/* Suppress title heading on page slugged 'blog' */
+body.blog .loop-title { display: none; }
