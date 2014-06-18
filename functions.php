@@ -56,8 +56,8 @@ function spinalfluid_theme_setup() {
 
     define( 'SPINE2_VERSION', '0.1' );
 
-    define( 'SPINE2_FOUNDATION_JS_URL', trailingslashit( get_template_directory_uri() . '/foundation/javascripts/foundation') );
-    define( 'SPINE2_VENDOR_JS_URL', trailingslashit( get_template_directory_uri() . '/foundation/javascripts/vendor') );
+    define( 'SPINE2_FOUNDATION_JS_URL', trailingslashit( get_template_directory_uri() . '/foundation/bower_components/foundation/js/foundation') );
+    define( 'SPINE2_VENDOR_JS_URL', trailingslashit( get_template_directory_uri() . '/foundation/bower_components/foundation/js/vendor') );
 
     // Include Spine Pagination
     include_once SPINE2_INC_DIR . 'pagination.php';
@@ -358,8 +358,11 @@ function spine2_load_scripts() {
 
     wp_enqueue_script( 'foundation-app', SPINE2_FOUNDATION_JS_URL . 'foundation.js', array( 'jquery' ), SPINE2_VERSION, true );
     wp_enqueue_script( 'foundation-topbar', SPINE2_FOUNDATION_JS_URL . 'foundation.topbar.js', array( 'jquery', 'foundation-app' ), SPINE2_VERSION, true );
-    wp_enqueue_script( 'foundation-section', SPINE2_FOUNDATION_JS_URL . 'foundation.section.js', array( 'jquery', 'foundation-app' ), SPINE2_VERSION, true );
+    //wp_enqueue_script( 'foundation-section', SPINE2_FOUNDATION_JS_URL . 'foundation.section.js', array( 'jquery', 'foundation-app' ), SPINE2_VERSION, true );
     wp_enqueue_script( 'global', SPINE2_JS_URL . 'global.js', array( 'jquery', 'foundation-app', 'foundation-topbar' ), SPINE2_VERSION, true );
+
+    wp_enqueue_script('post');
+    wp_enqueue_media( array( 'post' => $post_id ) );
 
 }
 
