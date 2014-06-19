@@ -10005,27 +10005,35 @@ h3, h5 {
   font-style: italic;
 }
 
-/* line 43, ../sass/app.scss */
+/* line 41, ../sass/app.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  max-width: 100% !important;
+}
+
+/* line 50, ../sass/app.scss */
 .panel, .sticky {
   background-color: #eaeaea;
 }
-/* line 44, ../sass/app.scss */
+/* line 51, ../sass/app.scss */
 .panel > h1, .sticky > h1, .panel h2, .sticky h2, .panel h3, .sticky h3, .panel h4, .sticky h4, .panel h5, .sticky h5, .panel h6, .sticky h6 {
   color: #888888;
 }
 
-/* line 51, ../sass/app.scss */
+/* line 58, ../sass/app.scss */
 a, a span {
   color: #1a4f4c;
 }
-/* line 52, ../sass/app.scss */
+/* line 59, ../sass/app.scss */
 a:hover, a span:hover {
   background-color: #ffe559;
   text-decoration: underline;
 }
 
 /* Thumbnail image link */
-/* line 56, ../sass/app.scss */
+/* line 63, ../sass/app.scss */
 a.th {
   max-width: 100%;
   height: auto;
@@ -10034,7 +10042,7 @@ a.th {
   box-shadow: none;
   text-align: center;
 }
-/* line 62, ../sass/app.scss */
+/* line 69, ../sass/app.scss */
 a.th > img {
   width: 100%;
   height: auto;
@@ -10087,12 +10095,12 @@ header#header {
 }
 */
 @media screen and (max-width: 480px) {
-  /* line 123, ../sass/app.scss */
+  /* line 130, ../sass/app.scss */
   body:not(.wpadmin) div#wpadminbar {
     margin-top: -46px;
   }
 }
-/* line 132, ../sass/app.scss */
+/* line 139, ../sass/app.scss */
 article {
   background-color: #efefef;
   border-bottom: solid 2px #1a4f4c;
@@ -10101,32 +10109,32 @@ article {
   padding-top: .3em;
   padding-bottom: .5em;
 }
-/* line 140, ../sass/app.scss */
+/* line 147, ../sass/app.scss */
 article ol {
   margin-top: 0em;
 }
-/* line 143, ../sass/app.scss */
+/* line 150, ../sass/app.scss */
 article ol.comment-list li.comment {
   background-color: #e7e7e7;
 }
-/* line 146, ../sass/app.scss */
+/* line 153, ../sass/app.scss */
 article ul {
   margin-top: 0em;
 }
-/* line 150, ../sass/app.scss */
+/* line 157, ../sass/app.scss */
 article p + ol,
 article p + ul {
   margin-top: -1.5em;
 }
 
-/* line 160, ../sass/app.scss */
+/* line 167, ../sass/app.scss */
 article.format-aside.article-list-item .entry-header,
 article.format-quote.article-list-item .entry-header,
 article.format-status.article-list-item .entry-header {
   display: none;
 }
 
-/* line 165, ../sass/app.scss */
+/* line 172, ../sass/app.scss */
 article.format-aside .entry-content {
   /* background-color: lighten($secondary-color, 25%); */
   background-color: #f7f7f7;
@@ -10141,18 +10149,18 @@ article.format-aside .entry-content {
   padding-top: .8em;
   padding-bottom: .8em;
 }
-/* line 178, ../sass/app.scss */
+/* line 185, ../sass/app.scss */
 article.format-aside .entry-content p {
   margin-top: 0;
   margin-left: .5em;
   margin-right: .5em;
   margin-bottom: 0;
 }
-/* line 184, ../sass/app.scss */
+/* line 191, ../sass/app.scss */
 article.format-aside .entry-content p + p {
   margin-top: -0.7;
 }
-/* line 188, ../sass/app.scss */
+/* line 195, ../sass/app.scss */
 article.format-aside.article-list-item .entry-content {
   margin-top: 0;
   margin-bottom: 1.2em;
@@ -10160,7 +10168,7 @@ article.format-aside.article-list-item .entry-content {
   padding-bottom: .5em;
 }
 
-/* line 200, ../sass/app.scss */
+/* line 207, ../sass/app.scss */
 article.format-image img,
 article.format-gallery img {
   width: 100%;
@@ -10168,44 +10176,44 @@ article.format-gallery img {
   border: solid 4px white;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
-/* line 205, ../sass/app.scss */
+/* line 212, ../sass/app.scss */
 article.format-image p.image-count,
 article.format-gallery p.image-count {
   font-style: italic;
 }
 
-/* line 209, ../sass/app.scss */
+/* line 216, ../sass/app.scss */
 article.format-video .entry-footer .entry-meta {
   margin-top: 1em;
 }
 
-/* line 212, ../sass/app.scss */
+/* line 219, ../sass/app.scss */
 blockquote {
   font-style: italic;
 }
 
-/* line 215, ../sass/app.scss */
+/* line 222, ../sass/app.scss */
 .entry-byline,
 .entry-footer {
   font-size: 0.85rem;
   font-color: #a2a2a2;
 }
 
-/* line 220, ../sass/app.scss */
+/* line 227, ../sass/app.scss */
 .loop-nav {
   border-bottom: solid 1px #1a4f4c;
   margin-bottom: .5em;
   padding-bottom: .3em;
 }
 
-/* line 230, ../sass/app.scss */
+/* line 237, ../sass/app.scss */
 .footer-content .credit {
   font-size: 0.8rem;
   font-color: #999999;
 }
 
 /* Suppress title heading on page slugged 'blog' */
-/* line 241, ../sass/app.scss */
+/* line 248, ../sass/app.scss */
 body.blog .loop-title {
   display: none;
 }

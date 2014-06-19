@@ -36,6 +36,13 @@ Original Author URI: http://paulwp.com/
 body { background-color: $body-bg; }
 h3, h5 { font-style: italic; }
 
+audio,
+canvas,
+video {
+    display: inline-block;
+    max-width: 100% !important;
+};
+
 //
 // Panels & forms
 //
