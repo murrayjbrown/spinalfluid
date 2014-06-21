@@ -23,7 +23,6 @@ Original Author URI: http://paulwp.com/
 
 @import "settings";
 @import "foundation";
-@import "menu-bar";
 @import "defaults";
 @import "layout";
 
@@ -74,21 +73,44 @@ a.th { max-width: 100%;
 }
 
 //
+// Navigation bars
+//
+
+.top-bar {
+    a { max-height: $topbar-height; }
+
+    input[type="text"], .button { display: block-inline;
+        font-size: 0.77778rem;
+        position: relative;
+        top: 7px;
+        a.button {  max-height: $topbar-height !important; }
+    }
+
+    input[type="text"] {
+        height: auto;
+        padding-top: 0.35rem;
+        padding-bottom: 0.35rem;
+        font-size: 0.75rem;
+    }
+}
+
+
+//
 // Header
 //
-/*
-header#header {
+
+header#header { display: none;
     position: static;
     z-index: -1;
     width: 100%;
     height: $header-height;
     min-height: $header-height;
     max-height: $header-height;
-    background-color: $topbar-bg;
+    background-color: transparent;
     border-bottom: solid 0px $primary-color;
     margin-top: 0;
     margin-bottom: 0;
-    > hgroup#branding {
+    > hgroup#branding { display: none;
         height: $header-height;
         min-height: $header-height;
         max-height: $header-height;
@@ -96,20 +118,23 @@ header#header {
         margin-bottom: 0;
         padding-top: 0;
         padding-bottom: 0;
+        background-color: transparent;
         > h1#site-title {
             display: none;
             postion: relative;
             z-index: 100;
+            background-color: transparent;
             a { color: $header-font-color; }
         }
         > h2#site-description {
             display: none;
             postion: relative;
             z-index: 100;
+            background-color: transparent;
             color: $subheader-font-color;
         }
     }
-    > img#header {
+    > img#header { display: none;
         position: relative;
         z-index: 1;
         float: left;
@@ -119,7 +144,7 @@ header#header {
         padding: 0;
     }
 }
-*/
+
 
 //
 // WP Admin Bar -- special handling for mobile devices

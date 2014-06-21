@@ -1026,7 +1026,10 @@ $topbar-bg: $secondary-color;
 
 // Height and margin
 // $topbar-height: 45px;
+$topbar-height: 45px;
+
 // $topbar-margin-bottom: emCalc(30px);
+$topbar-margin-bottom: emCalc(36px);
 
 // Control Input height for top bar
 // $topbar-input-height: 2.45em;
@@ -1076,61 +1079,6 @@ $topbar-menu-icon-color: $primary-color;
 // $topbar-breakpoint: emCalc(940px); // Change to 9999px for always mobile layout
 // $topbar-media-query: "only screen and (min-width "#{$topbar-breakpoint}")";
 
-//
-// Main Bar Variables
-//
-
-// Background color for the main bar
-// $menubar-bg: #111;
-$menubar-bg: $secondary-color;
-
-// Height and margin
-// $menubar-height: 45px;
-// $menubar-margin-bottom: emCalc(30px);
-
-// Control Input height for main bar
-// $menubar-input-height: 2.45em;
-
-// Controlling the styles for the title in the main bar
-// $menubar-title-weight: bold;
-// $menubar-title-font-size: emCalc(17px);
-
-// Set the link colors and styles for main-level nav
-// $menubar-link-color: #fff;
-$menubar-link-color: $primary-color;
-// $menubar-link-weight: bold;
-$menubar-link-weight: bolder;
-// $menubar-link-font-size: emCalc(13px);
-
-// Style the main bar dropdown elements
-// $menubar-dropdown-bg: #333;
-$menubar-dropdown-bg: $menubar-bg;
-// $menubar-dropdown-link-color: #fff;
-$menubar-dropdown-link-color: $primary-color;
-// $menubar-dropdown-toggle-size: 5px;
-// $menubar-dropdown-toggle-color: #fff;
-$menubar-dropdown-toggle-color: $primary-color;
-// $menubar-dropdown-toggle-alpha: 0.5;
-// $dropdown-label-color: #555;
-
-$menubar-dropdown-link-bg: $menubar-bg;
-//$menubar-link-bg-hover: #90b2b0;
-$menubar-link-bg-hover: $secondary-color;
-
-// main menu icon styles
-// $menubar-menu-link-transform: uppercase;
-// $menubar-menu-link-font-size: emCalc(13px);
-// $menubar-menu-link-weight: bold;
-// $menubar-menu-link-color: #fff;
-// $menubar-menu-icon-color: #fff;
-$menubar-menu-icon-color: $menubar-bg;
-// $menubar-menu-link-color-toggled: #888;
-// $menubar-menu-icon-color-toggled: #888;
-
-// Transitions and breakpoint styles
-// $menubar-transition-speed: 300ms;
-// $menubar-breakpoint: emCalc(940px); // Change to 9999px for always mobile layout
-// $menubar-media-query: "only screen and (min-width "#{$menubar-breakpoint}")";
 
 ////////////////////////////////////////////////////////////////////////
 //
