@@ -35,6 +35,8 @@ Original Author URI: http://paulwp.com/
 body { background-color: $body-bg; }
 h3, h5 { font-style: italic; }
 
+blockquote { border-left: dashed 1px };
+
 audio,
 canvas,
 video {
@@ -47,7 +49,17 @@ video {
 //
 
 .panel {background-color: darken($body-bg, 2%);
-    > h1,h2,h3,h4,h5,h6 { color: lighten($header-font-color, 20%); }
+    h1,h2,h3,h4,h5,h6 {
+        color: lighten($header-font-color, 20%);
+        font-family: $sans-font-family;
+        font-size: 1em;
+    }
+    h1 { font-size: emCalc(28px); }
+    h2 { font-size: emCalc(24px); }
+    h3 { font-size: emCalc(20px); }
+    h4 { font-size: emCalc(18px); }
+    h5 { font-size: emCalc(14px); }
+    h6 { font-size: emCalc(12px); }
 }
 
 //
@@ -77,6 +89,7 @@ a.th { max-width: 100%;
 //
 
 .top-bar {
+    font-family: $sans-font-family;
     a { max-height: $topbar-height; }
 
     input[type="text"], .button { display: block-inline;
@@ -99,18 +112,18 @@ a.th { max-width: 100%;
 // Header
 //
 
-header#header { display: none;
+header#header { display: block;
     position: static;
     z-index: -1;
     width: 100%;
     height: $header-height;
     min-height: $header-height;
     max-height: $header-height;
-    background-color: transparent;
+    background-color: $header-bg-color;
     border-bottom: solid 0px $primary-color;
     margin-top: 0;
     margin-bottom: 0;
-    > hgroup#branding { display: none;
+    > hgroup#branding {
         height: $header-height;
         min-height: $header-height;
         max-height: $header-height;
@@ -119,22 +132,24 @@ header#header { display: none;
         padding-top: 0;
         padding-bottom: 0;
         background-color: transparent;
+        font-family: $serif-font-family;
         > h1#site-title {
-            display: none;
+            display: block;
             postion: relative;
             z-index: 100;
             background-color: transparent;
             a { color: $header-font-color; }
+            img { float: left; }
         }
         > h2#site-description {
-            display: none;
+            display: block;
             postion: relative;
             z-index: 100;
             background-color: transparent;
             color: $subheader-font-color;
         }
     }
-    > img#header { display: none;
+    > img#header { display: block;
         position: relative;
         z-index: 1;
         float: left;
@@ -193,13 +208,21 @@ article.format-status {
     }
 }
 
+article.format-quote {
+    font-family: $serif-font-family;
+}
+
+article.format-status {
+    font-family: $sans-font-family;
+}
+
 article.format-aside {
     .entry-content {
         /* background-color: lighten($secondary-color, 25%); */
         background-color: #f7f7f7;
         border-bottom: solid 0px $article-border-color;
         box-shadow: 0 0 0 2px rgba(127,127,127,0.2);
-        font-family: $paragraph-aside-font-family;
+        font-family: $fancy-font-family;
         font-size: $paragraph-aside-font-size;
         font-style: $paragraph-aside-font-style;
         line-height: $paragraph-aside-line-height;

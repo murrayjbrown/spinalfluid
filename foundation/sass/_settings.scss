@@ -10,9 +10,13 @@
 //
 // Import Google Fonts
 //
-//@import url('https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans|Titillium+Web|Gentium+Book+Basic|Source+Sans+Pro|Source+Code+Pro|Dosis');
-@import url('https://fonts.googleapis.com/css?family=Alice|Lato|Source+Code+Pro|Dosis');
+//@import url('https://fonts.googleapis.com/css?family=Alice|Merriweather|Merriweather+Sans|Titillium+Web|Gentium+Book+Basic|Source+Sans+Pro|Source+Code+Pro|Dosis');
+@import url('https://fonts.googleapis.com/css?family=Andada|Lato|Source+Sans+Pro|Source+Code+Pro|Dosis');
 
+$sans-font-family: Lato, "Source Sans Pro", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif-font-family: Andada, "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+$mono-font-family: "Source Code Pro", Consolas, "Liberation Mono", Courier, monospace;
+$fancy-font-family: Dosis, $serif-font-family;
 
 //
 // Foundation Global Variables
@@ -25,8 +29,9 @@
 $body-bg: #efefef;
 // $body-font-color: #222;
 $body-font-color: #333;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$body-font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $body-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-font-family: $serif-font-family;
+
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -105,8 +110,7 @@ $secondary-color: #FFE559; // Sahara
 
 // We use these to control header font styles
 // $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-//$header-font-family: "Alice","Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
-$header-font-family: "Alice","Georgia", serif;
+$header-font-family: $serif-font-family;
 // $header-font-weight: bold;
 $header-font-weight: normal;
 // $header-font-style: normal;
@@ -152,7 +156,7 @@ $paragraph-font-size: 1rem;
 $paragraph-line-height: 1.4;
 // $paragraph-margin-bottom: emCalc(20px);
 
-$paragraph-aside-font-family:  "Dosis", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$paragraph-aside-font-family: $fancy-font-family;
 // $paragraph-aside-font-size: emCalc(14px);
 $paragraph-aside-font-size: $paragraph-font-size;
 // $paragraph-aside-line-height: 1.35;
@@ -163,6 +167,7 @@ $paragraph-aside-font-style: normal;
 // We use these to style <code> tags
 // $code-color: darken($alert-color, 15%);
 // $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
+$code-font-family: $mono-font-family;
 // $code-font-weight: bold;
 
 // We use these to style anchors
@@ -185,6 +190,9 @@ $paragraph-aside-font-style: normal;
 
 // We use these to style blockquotes
 // $blockquote-font-color: lighten($header-font-color, 30%);
+$blockquote-font-color: lighten($body-font-color, 5%);
+
+// $blockquote-font-style: italic;
 $blockquote-font-style: italic;
 // $blockquote-padding: emCalc(9px) emCalc(20px) 0 emCalc(19px);
 // $blockquote-border: 1px solid #ddd;
@@ -1086,6 +1094,7 @@ $topbar-menu-icon-color: $primary-color;
 //
 
 $header-height: 120px;
+$header-bg-color: $secondary-color;
 $article-bg-color: $body-bg;
 $article-border-color: $primary-color;
 $footer-font-color: #999;
