@@ -33,7 +33,6 @@ require_once( trailingslashit( get_template_directory() ) . 'hybrid-core/hybrid.
 new Hybrid();
 
 /* Do theme setup on the 'after_setup_theme' hook. */
-// add_action( 'after_setup_theme', 'spine2_theme_setup' ); // SUPERCEDED (mjbrown) for SpinalFluid
 add_action( 'after_setup_theme', 'spinalfluid_theme_setup' );
 
 /**
@@ -44,7 +43,6 @@ add_action( 'after_setup_theme', 'spinalfluid_theme_setup' );
  * @access public
  * @return void
  */
-//function spine2_theme_setup() { // SUPERCEDED (mjbrown) for SpinalFluid
 function spinalfluid_theme_setup() {
 
     /** Theme constants */
@@ -92,13 +90,6 @@ function spinalfluid_theme_setup() {
         array( 'comment-reply' )
     );
 
-    /* Load styles.
-    add_theme_support(
-        'hybrid-core-styles',
-        array( '25px', 'gallery', 'parent', 'style' )
-    );
-    */
-
     /* Load widgets. */
     add_theme_support( 'hybrid-core-widgets' );
 
@@ -125,18 +116,13 @@ function spinalfluid_theme_setup() {
     add_theme_support( 'get-the-image' );
 
     /** Custom thumbnail size */
-    /* DISABLED (mjbrown)
     //add_image_size('featured', 640, 132, true);
-    //DISABLED */
 
     /* Use breadcrumbs. */
     //add_theme_support( 'breadcrumb-trail' );
 
-    /* Nicer [gallery] shortcode implementation. */
-    //add_theme_support( 'cleaner-gallery' ); //DISABLE (mjbrown)
-
     /* Better captions for themes to style. */
-    //add_theme_support( 'cleaner-caption' );
+    add_theme_support( 'cleaner-caption' );
 
     /* Automatically add feed links to <head>. */
     add_theme_support( 'automatic-feed-links' );
@@ -152,14 +138,10 @@ function spinalfluid_theme_setup() {
     );
     add_theme_support( 'custom-header', $args );
 
-    /* DISABLED (mjbrown)
-    add_theme_support('featured-header');
-    //DISABLED */
-
     /* Custom background. */
     add_theme_support(
         'custom-background',
-        array( 'default-color' => 'ffffff' )
+        array( 'default-color' => 'efefef' )
     );
 
     /* Post formats. */
@@ -180,8 +162,6 @@ function spinalfluid_theme_setup() {
 
     /** Hybrid Core 1.6 changes **/
     add_filter( "{$prefix}_sidebar_defaults", 'spine2_sidebar_defaults', 15, 2 );
-    //add_filter( 'cleaner_gallery_defaults', 'spine2_gallery_defaults' ); //DISABLED (mjbrown)
-    //add_filter( 'the_content', 'spine2_aside_infinity', 9 ); // DISABLED (mjbrown)
     /****************************/
 
     // load the stylesheet
@@ -205,7 +185,6 @@ function spinalfluid_theme_setup() {
 
     add_filter('sidebars_widgets', 'spine2_disable_sidebars' );
 
-    //add_filter('post_thumbnail_html', 'pdw_spine_add_thumbnail_class',10, 3 );
     add_filter( 'get_the_image', 'spine2_add_featured_img_class', 10, 1 );
 }
 
@@ -220,42 +199,6 @@ function spinalfluid_excerpt_length( $length ) {
     return 120;
 }
 
-
-/* === HYBRID CORE 1.6 CHANGES. ===
- *
- * The following changes are slated for Hybrid Core version 1.6 to make it easier for
- * theme developers to build awesome HTML5 themes. The code will be removed (or revised)
- * once 1.6 is released.
- */
-
-/**
- * Content template.  This is an early version of what a content template function will look like
- * in future versions of Hybrid Core.
- *
- * @since  0.1.0
- * @access public
- * @return void
- */
-/* DISABLED (mjbrown)
-function spine2_get_content_template() {
-
-    $templates = array();
-    $post_type = get_post_type();
-
-    if ( post_type_supports( $post_type, 'post-formats' ) ) {
-
-        $post_format = get_post_format() ? get_post_format() : 'standard';
-
-        $templates[] = "content-{$post_type}-{$post_format}.php";
-        $templates[] = "content-{$post_format}.php";
-    }
-
-    $templates[] = "content-{$post_type}.php";
-    $templates[] = 'content.php';
-
-    return locate_template( $templates, true, false );
-}
-*/
 
 /**
  * Sidebar parameter defaults.
@@ -289,49 +232,6 @@ function spine2_sidebar_defaults( $defaults, $sidebar ) {
 
 }
 
-/**
- * Gallery defaults for the Cleaner Gallery extension.
- *
- * @since  0.1.0
- * @access public
- *
- * @param  array  $defaults
- *
- * @return array
- */
-/* DISABLED(mjbrown)
-function spine2_gallery_defaults( $defaults ) {
-
-    $defaults['itemtag']    = 'figure';
-    $defaults['icontag']    = 'div';
-    $defaults['captiontag'] = 'figcaption';
-
-    return $defaults;
-}
-*/
-
-/**
- * Adds an infinity character "&#8734;" to the end of the post content on 'aside' posts.  This
- * is from version 0.1.1 of the Post Format Tools extension.
- *
- * @since  0.1.0
- * @access public
- *
- * @param  string $content The post content.
- *
- * @return string $content
- */
-/* DISABLED (mjbrown)
-function spine2_aside_infinity( $content ) {
-
-    if ( has_post_format( 'aside' ) && ! is_singular() )
-        $content .= ' <a class="permalink" href="' . get_permalink() . '" title="' . the_title_attribute( array( 'echo' => false ) ) . '">&#8734;</a>';
-
-    return $content;
-}
-*/
-
-/* End Hybrid Core 1.6 section. */
 
 function spine2_load_styles() {
     /** This loads the main theme style.css */
@@ -342,7 +242,6 @@ function spine2_load_styles() {
 function spine2_foundation_pagination( $args ) {
 
     $args['type'] = 'list';
-
     return $args;
 }
 
@@ -350,20 +249,14 @@ function spine2_foundation_pagination( $args ) {
  * Load the necessary javascript files
  */
 function spine2_load_scripts() {
-    /** This is the main javascript file */
-    //wp_deregister_script('jquery');
-    //wp_enqueue_script( 'jquery', SPINE2_VENDOR_JS_URL . 'jquery.js', array(), SPINE2_VERSION, true );
 
-    wp_enqueue_script( 'media-audiovideo' ); // Added support for WP audio player (mjbrown)
-
+    wp_enqueue_script( 'media-audiovideo' );
     wp_enqueue_script( 'foundation-app', SPINE2_FOUNDATION_JS_URL . 'foundation.js', array( 'jquery' ), SPINE2_VERSION, true );
     wp_enqueue_script( 'foundation-topbar', SPINE2_FOUNDATION_JS_URL . 'foundation.topbar.js', array( 'jquery', 'foundation-app' ), SPINE2_VERSION, true );
-    //wp_enqueue_script( 'foundation-section', SPINE2_FOUNDATION_JS_URL . 'foundation.section.js', array( 'jquery', 'foundation-app' ), SPINE2_VERSION, true );
     wp_enqueue_script( 'global', SPINE2_JS_URL . 'global.js', array( 'jquery', 'foundation-app', 'foundation-topbar' ), SPINE2_VERSION, true );
 
     wp_enqueue_script('post');
     wp_enqueue_media( array( 'post' => $post_id ) );
-
 }
 
 /**
@@ -380,7 +273,6 @@ function spine2_oembed_html($html, $url, $attr, $post_id) {
         return $html;
     return '<div class="spine-video">' . $html . '</div>';
 }
-
 
 /**
  * Registers Spine extra widget areas
@@ -513,33 +405,12 @@ function wptuts_screen_help( $contextual_help, $screen_id, $screen ) {
     return $contextual_help;
 }
 
-/*
- * DISABLED (mjbrown)
- *
-add_filter( 'theme_mod_header_image', 'spine2_theme_mod_header_image', 11 );
-
-function spine2_theme_mod_header_image( $url ) {
-
-    if(is_admin())
-        return;
-
-    if(!is_singular())
-        return;
-
-    if ( get_post_meta(get_the_id(),'spine2_hide_header_img', true) )
-        $url = '';
-
-    return $url;
-}
-//DISABLED */
-
 // Replaces the excerpt "more" text by a link
 function spine2_new_excerpt_more($more) {
     global $post;
     //return '<a class="moretag" href="'. get_permalink($post->ID) . '"> Read the full article...</a>';
     return ' <span style="white-space:nowrap;"><a class="moretag" href="'. get_permalink($post->ID) . '">&hellip;more&raquo;</a>&nbsp;<a class="moretag" href="'. get_permalink($post->ID) . '">&#8734;</a></span>';
 }
-//add_filter('excerpt_more', 'spine2_new_excerpt_more'); // MOVED/DISABLED (mjbrown)
 
 /**
  * Disables sidebars if viewing a one-column page.

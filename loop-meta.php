@@ -1,94 +1,103 @@
 <?php
 /* If viewing a singular page, return. */
 if ( is_singular() )
-	return;
+    return;
 ?>
 
 <div class="loop-meta">
 
-	<?php if ( is_home() && !is_front_page() ) { ?>
+    <?php if ( is_home() && !is_front_page() ) { ?>
 
-		<h1 class="loop-title"><?php echo get_post_field( 'post_title', get_queried_object_id() ); ?></h1>
+        <h1 class="loop-title"><?php echo get_post_field( 'post_title', get_queried_object_id() ); ?></h1>
 
-		<div class="loop-description">
-			<?php echo apply_filters( 'the_content', get_post_field( 'post_content', get_queried_object_id() ) ); ?>
-		</div><!-- .loop-description -->
+        <div class="loop-description">
+            <?php echo apply_filters( 'the_content', get_post_field( 'post_content', get_queried_object_id() ) ); ?>
+        </div><!-- .loop-description -->
 
-	<?php } elseif ( is_category() ) { ?>
+    <?php } elseif ( is_category() ) { ?>
 
-		<h1 class="loop-title"><?php single_cat_title(); ?></h1>
+        <h1 class="loop-title"><?php single_cat_title(); ?></h1>
 
-		<div class="loop-description">
-			<?php echo category_description(); ?>
-		</div><!-- .loop-description -->
+        <div class="loop-description">
+            <?php echo category_description(); ?>
+        </div><!-- .loop-description -->
 
-	<?php } elseif ( is_tag() ) { ?>
+    <?php } elseif ( is_tag() ) { ?>
 
-		<h1 class="loop-title"><?php single_tag_title(); ?></h1>
+        <h1 class="loop-title"><?php single_tag_title(); ?></h1>
 
-		<div class="loop-description">
-			<?php echo tag_description(); ?>
-		</div><!-- .loop-description -->
+        <div class="loop-description">
+            <?php echo tag_description(); ?>
+        </div><!-- .loop-description -->
 
-	<?php } elseif ( is_tax() ) { ?>
+    <?php } elseif ( is_tax() ) { ?>
 
-		<h1 class="loop-title"><?php single_term_title(); ?></h1>
+        <h1 class="loop-title"><?php single_term_title(); ?></h1>
 
-		<div class="loop-description">
-			<?php echo term_description( '', get_query_var( 'taxonomy' ) ); ?>
-		</div><!-- .loop-description -->
+        <div class="loop-description">
+            <?php echo term_description( '', get_query_var( 'taxonomy' ) ); ?>
+        </div><!-- .loop-description -->
 
-	<?php } elseif ( is_author() ) { ?>
+    <?php } elseif ( is_author() ) { ?>
 
-		<h1 class="loop-title fn n"><?php the_author_meta( 'display_name', get_query_var( 'author' ) ); ?></h1>
+        <h1 class="loop-title fn n"><?php the_author_meta( 'display_name', get_query_var( 'author' ) ); ?></h1>
 
-		<div class="loop-description">
-			<?php echo wpautop( get_the_author_meta( 'description', get_query_var( 'author' ) ) ); ?>
-		</div><!-- .loop-description -->
+        <div class="loop-description">
+            <?php echo wpautop( get_the_author_meta( 'description', get_query_var( 'author' ) ) ); ?>
+        </div><!-- .loop-description -->
 
-	<?php } elseif ( is_search() ) { ?>
+    <?php } elseif ( is_search() ) { ?>
 
-		<h1 class="loop-title"><?php echo esc_attr( get_search_query() ); ?></h1>
+        <?php // <h1 class="loop-title"><?php echo esc_attr( get_search_query() ); ?></h1>
 
-		<div class="loop-description">
-			<?php echo wpautop( sprintf( __( 'You are browsing the search results for "%s"', 'spinalfluid' ), esc_attr( get_search_query() ) ) ); ?>
-		</div><!-- .loop-description -->
+        <section id="search-results-form" class="panel search">
+            <h3><?php printf( __('Search', spinalfluid) ); ?></h3>
+            <form method="get" class="search-form" id="search-formhybrid-search" action="<?php home_url('/') ?>">
+            <div>
+                <input class="search-text" type="text" name="s" value="<?php printf( '%s', esc_attr( get_search_query() ) ); ?>" id="search-texthybrid-search" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" />
+                </div>
+            </form>
+        </section>
 
-	<?php } elseif ( is_post_type_archive() ) { ?>
+        <div class="loop-description">
+            <?php echo wpautop( sprintf( __( 'You are browsing the search results for <i>"%s"</i>', 'spinalfluid' ), esc_attr( get_search_query() ) ) ); ?>
+        </div><!-- .loop-description -->
 
-		<?php $post_type = get_post_type_object( get_query_var( 'post_type' ) ); ?>
+    <?php } elseif ( is_post_type_archive() ) { ?>
 
-		<h1 class="loop-title"><?php post_type_archive_title(); ?></h1>
+        <?php $post_type = get_post_type_object( get_query_var( 'post_type' ) ); ?>
 
-		<div class="loop-description">
-			<?php if ( !empty( $post_type->description ) ) echo wpautop( $post_type->description ); ?>
-		</div><!-- .loop-description -->
+        <h1 class="loop-title"><?php post_type_archive_title(); ?></h1>
 
-	<?php } elseif ( is_day() || is_month() || is_year() ) { ?>
+        <div class="loop-description">
+            <?php if ( !empty( $post_type->description ) ) echo wpautop( $post_type->description ); ?>
+        </div><!-- .loop-description -->
 
-		<?php
-			if ( is_day() )
-				$date = get_the_time( __( 'F d, Y', 'spinalfluid' ) );
-			elseif ( is_month() )
-				$date = get_the_time( __( 'F Y', 'spinalfluid' ) );
-			elseif ( is_year() )
-				$date = get_the_time( __( 'Y', 'spinalfluid' ) );
-		?>
+    <?php } elseif ( is_day() || is_month() || is_year() ) { ?>
 
-		<h1 class="loop-title"><?php echo $date; ?></h1>
+        <?php
+            if ( is_day() )
+                $date = get_the_time( __( 'F d, Y', 'spinalfluid' ) );
+            elseif ( is_month() )
+                $date = get_the_time( __( 'F Y', 'spinalfluid' ) );
+            elseif ( is_year() )
+                $date = get_the_time( __( 'Y', 'spinalfluid' ) );
+        ?>
 
-		<div class="loop-description">
-			<?php echo wpautop( sprintf( __( 'You are browsing the site archives for %s.', 'spinalfluid' ), $date ) ); ?>
-		</div><!-- .loop-description -->
+        <h1 class="loop-title"><?php echo $date; ?></h1>
 
-	<?php } elseif ( is_archive() ) { ?>
+        <div class="loop-description">
+            <?php echo wpautop( sprintf( __( 'You are browsing the site archives for %s.', 'spinalfluid' ), $date ) ); ?>
+        </div><!-- .loop-description -->
 
-		<h1 class="loop-title"><?php _e( 'Archives', 'spinalfluid' ); ?></h1>
+    <?php } elseif ( is_archive() ) { ?>
 
-		<div class="loop-description">
-			<?php echo wpautop( __( 'You are browsing the site archives.', 'spinalfluid' ) ); ?>
-		</div><!-- .loop-description -->
+        <h1 class="loop-title"><?php _e( 'Archives', 'spinalfluid' ); ?></h1>
 
-	<?php } // End if check ?>
+        <div class="loop-description">
+            <?php echo wpautop( __( 'You are browsing the site archives.', 'spinalfluid' ) ); ?>
+        </div><!-- .loop-description -->
+
+    <?php } // End if check ?>
 
 </div><!-- .loop-meta -->

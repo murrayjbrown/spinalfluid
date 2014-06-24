@@ -1,3 +1,25 @@
+////////////////////////////////////////////////////////////////////////
+// Fonts
+////////////////////////////////////////////////////////////////////////
+
+$sans-font-stack: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif-font-stack: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+$mono-font-stack: Consolas, "Liberation Mono", Courier, monospace;
+$fancy-font-stack: $sans-font-stack;
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Andada|Andika|Lato|Source+Code+Pro');
+
+$sans-font-family: Lato, $sans-font-stack;
+$serif-font-family: Andada, $serif-font-stack;
+$mono-font-family: "Source Code Pro", $mono-font-stack;
+$fancy-font-family: Andika, $fancy-font-stack;
+
+
+////////////////////////////////////////////////////////////////////////
+// Foundation Global Variables
+////////////////////////////////////////////////////////////////////////
+
 // Required global settings and mixins for Foundation
 @import "foundation/functions";
 
@@ -7,28 +29,14 @@
 // doc page. We tried to name them to where they'd make sense just by reading them.
 // Go to http://foundation.zurb.com/docs/ to find what you need.
 
-//
-// Import Google Fonts
-//
-//@import url('https://fonts.googleapis.com/css?family=Alice|Merriweather|Merriweather+Sans|Titillium+Web|Gentium+Book+Basic|Source+Sans+Pro|Source+Code+Pro|Dosis');
-@import url('https://fonts.googleapis.com/css?family=Andada|Lato|Source+Sans+Pro|Source+Code+Pro|Dosis');
-
-$sans-font-family: Lato, "Source Sans Pro", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif-font-family: Andada, "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
-$mono-font-family: "Source Code Pro", Consolas, "Liberation Mono", Courier, monospace;
-$fancy-font-family: Dosis, $serif-font-family;
-
-//
-// Foundation Global Variables
-//
 
 // This is the default html and body font-size for the base em value.
 // $em-base: 16px;
 
 // We use these to control various global styles
 $body-bg: #efefef;
-// $body-font-color: #222;
 $body-font-color: #333;
+
 // $body-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $body-font-family: $serif-font-family;
 
@@ -42,16 +50,11 @@ $body-font-family: $serif-font-family;
 // $text-direction: ltr;
 // $text-direction: rtl;
 
-// We use these as default colors throughout
-// $primary-color: #2ba6cb; <== Overridden via Theme customizer
+// We use these as default colors throughout (overridden via theme customizer)
+// $primary-color: #2ba6cb;
 $primary-color: #1a4f4c; // Cyprus (Logo colour)
-
-// $secondary-color: #ffed38; // Golden Fizz (Pantone 803)
-// $secondary-color: #F7CB00; // Mango
-// $secondary-color: #F8CD39; // Mellow Orange
-// $secondary-color: #FFD800; // Circus 394
-// $secondary-color: #FFD33C; // Taking Over
-$secondary-color: #FFE559; // Sahara
+// $secondary-color: #e9e9e9;
+$secondary-color: #ffe559; // Sahara
 
 // $alert-color: #c60f13;
 // $success-color: #5da423;
@@ -59,7 +62,6 @@ $secondary-color: #FFE559; // Sahara
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
 // $global-rounded: 1000px;
-
 
 // We use these to control inset shadow shiny edges and depressions.
 // $shiny-edge-size: 0 1px 0;
@@ -123,17 +125,11 @@ $header-font-color: #555;
 
 // We use these to control header font sizes
 // $h1-font-size: emCalc(44px);
-$h1-font-size: emCalc(48px);
 // $h2-font-size: emCalc(37px);
-$h2-font-size: emCalc(42px);
 // $h3-font-size: emCalc(27px);
-$h3-font-size: emCalc(32px);
 // $h4-font-size: emCalc(23px);
-$h4-font-size: emCalc(28px);
 // $h5-font-size: emCalc(18px);
-$h5-font-size: emCalc(23px);
 // $h6-font-size: 1em;
-$h6-font-size: emCalc(18px);
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
@@ -155,8 +151,6 @@ $paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
 $paragraph-line-height: 1.4;
 // $paragraph-margin-bottom: emCalc(20px);
-
-$paragraph-aside-font-family: $fancy-font-family;
 // $paragraph-aside-font-size: emCalc(14px);
 $paragraph-aside-font-size: $paragraph-font-size;
 // $paragraph-aside-line-height: 1.35;
@@ -786,7 +780,7 @@ $input-focus-bg-color: lighten($body-bg, 2%);
 // $price-item-padding: emCalc(15px);
 // $price-item-align: center;
 // $price-item-font-size: emCalc(14px);
-// $price-item-weight: normal;
+// $price-item-weight: normal; #eaf9f5
 // $price-item-bottom-border: dotted 1px #ddd;
 
 // We use these to control the CTA area styles
@@ -1071,6 +1065,7 @@ $topbar-dropdown-link-bg: $secondary-color;
 
 //$topbar-link-bg-hover: #90b2b0;
 $topbar-link-bg-hover: $primary-color;
+$topbar-link-font-family: $sans-font-family;
 
 // Top menu icon styles
 // $topbar-menu-link-transform: uppercase;
@@ -1089,16 +1084,17 @@ $topbar-menu-icon-color: $primary-color;
 
 
 ////////////////////////////////////////////////////////////////////////
-//
 // Local Settings
-//
+////////////////////////////////////////////////////////////////////////
 
 $header-height: 120px;
-$header-bg-color: $secondary-color;
+$header-bg-color: $body-bg;
+
 $article-bg-color: $body-bg;
 $article-border-color: $primary-color;
+
 $footer-font-color: #999;
 $footer-font-size: .8rem;
+
 $meta-font-size: .85rem;
 $meta-font-color: $small-font-color;
-
