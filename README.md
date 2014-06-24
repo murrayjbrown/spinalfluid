@@ -4,16 +4,20 @@
 
 # Description
 
-Spinal Fluid is a responsive fluid grid theme adapted from the Spine 2 theme by Paul de Wouters,
-built upon the Hybrid Core theme framework and the Foundation front end framework.
+Spinal Fluid is a responsive fluid grid theme adapted from the Spine 2 theme by Paul de Wouters (pdewouters),
+built upon the Hybrid Core theme framework and the Foundation front-end framework.
 
 # Author
 
 * murrayjbrown - Murray J. Brown <mjb@mjbrown.com> - http://witstone.com
 
-# Contributor(s)
+# Acknowledgements
 
-* pdewouters - Paul de Wouters - http://paulwp.com
+* Special thanks to Paul de Wouters (pdewouters) for developing the Spine 2 theme for Wordpress,
+  without which this project would have been more difficult.
+
+* Gratitude also to the developers of, and contributors to, Zurb's Foundation front-end framework,
+  the Hybrid Core theme framework for Wordpress.
 
 # License
 
