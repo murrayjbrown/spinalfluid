@@ -61,7 +61,7 @@ function spinalfluid_theme_setup() {
     include_once SPINE2_INC_DIR . 'pagination.php';
 
     // Load Customizer settings
-    include_once SPINE2_INC_DIR . 'spine-customizer.php';
+    //include_once SPINE2_INC_DIR . 'spine-customizer.php';
 
     //include_once SPINE2_INC_DIR . 'gallery-shortcode.php'; //DISABLED (mjbrown)
 
