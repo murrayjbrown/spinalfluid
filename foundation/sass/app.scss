@@ -17,15 +17,9 @@ Original Author: Paul de Wouters
 Original Author URI: http://paulwp.com/
 */
 
-//
-// Theme global settings, Foundation components, default elements, and base layout
-//
-@import "settings";
-@import "foundation";
-@import "defaults";
-@import "layout";
-
-//
-// Site customizations
-//
-@import "site";
+@import "settings";     // Theme settings (override defaults)
+@import "defaults";     // Foundation default setting values
+@import "foundation";   // Foundation components
+@import "elements";     // Theme element definitions
+@import "layout";       // Theme layout
+@import "custom";       // Site customizations
