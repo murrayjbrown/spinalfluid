@@ -18,10 +18,14 @@ Original Author URI: http://paulwp.com/
 */
 
 //
-// Global Settings, Foundation Components, Default Elements, and Base Layout
+// Theme global settings, Foundation components, default elements, and base layout
 //
 @import "settings";
 @import "foundation";
 @import "defaults";
 @import "layout";
 
+//
+// Site customizations
+//
+@import "site";

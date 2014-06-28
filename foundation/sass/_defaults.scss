@@ -185,7 +185,11 @@ td.label{
     max-width: 100%;
 }
 
-.panel {background-color: darken($body-bg, 2%);
+.panel {
+    background-color: darken($body-bg, 2%);
+    color: lighten($body-font-color, 20%);
+    font-family: $sans-font-family;
+
     h1,h2,h3,h4,h5,h6 {
         color: lighten($header-font-color, 20%);
         font-family: $sans-font-family;
@@ -234,7 +238,8 @@ a.th { max-width: 100%;
 }
 
 
-header#header { display: block;
+#header {
+    display: block;
     position: static;
     z-index: -1;
     width: 100%;
@@ -245,40 +250,68 @@ header#header { display: block;
     border-bottom: solid 0px $primary-color;
     margin-top: 0;
     margin-bottom: 0;
-    > hgroup#branding {
-        height: $header-height;
-        min-height: $header-height;
-        max-height: $header-height;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        background-color: transparent;
-        font-family: $serif-font-family;
-        > h1#site-title {
-            display: block;
-            postion: relative;
-            z-index: 100;
-            background-color: transparent;
-            a { color: $header-font-color; }
-            img { float: left; }
-        }
-        > h2#site-description {
-            display: block;
-            postion: relative;
-            z-index: 100;
-            background-color: transparent;
-            color: $subheader-font-color;
-        }
-    }
-    > img#header { display: block;
+
+    #header-container {
+        display: block;
         position: relative;
-        z-index: 1;
-        float: left;
-        width: auto;
-        height: 100%;
-        margin: -$header-height 0 0 0;
+        width: 100%;
+        height: $header-height;
+        max-height: $header-height;
+        margin: 0;
         padding: 0;
+        background-color: transparent;
+
+        hgroup#branding {
+            display: block;
+            height: 100%;
+            max-height: $header-height;
+            background-color: transparent;
+            font-family: $serif-font-family;
+            text-align: left;
+
+            #site-title {
+                position: relative;
+                z-index: 100;
+                background-color: transparent;
+                color: $title-font-color;
+                font-family: $title-font-family;
+                font-size: $title-font-size;
+                font-style: $title-font-style;
+                font-weight: $title-font-weight;
+                white-space: nowrap;
+            }
+
+            #site-description {
+                position: relative;
+                z-index: 100;
+                background-color: transparent;
+                color: $subtitle-font-color;
+                font-family: $subtitle-font-family;
+                font-size: $subtitle-font-size;
+                font-style: $subtitle-font-style;
+                font-weight: $subtitle-font-weight;
+                white-space: nowrap;
+            }
+
+            #logo-container {
+                position: relative;
+                z-index: 100;
+                float: left;
+                width: auto;
+                height: $header-height;
+                max-height: rem-calc($header-height)-2rem;
+
+                img#logo {
+                    width: auto;
+                    height: auto;
+                    vertical-align: middle;
+                    margin-top: 1rem;
+                    margin-right: 1rem;
+                    margin-bottom: 1rem;
+
+                }
+            }
+        }
     }
 }
 
@@ -399,3 +432,14 @@ blockquote { font-style: $blockquote-font-style; }
         }
     }
 }
+
+//
+// Local customizations
+//
+
+/* Site title appears in both topbar and site branding header, unelss element(s) suppressed below
+ */
+.topbar h1 { display: block; visibility: visible;  } // Topbar title
+#header img#logo { display: block; visibility: visible; } // Logo
+#header #site-title { display: block; visibility: visible; } // Site title
+#header #site-description { display: block; visibility: visible; } // Site description

@@ -22,22 +22,22 @@
         <?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
 
         <header id="header">
+        <?php $bg_url = get_header_image(); ?>
+        <div id="header-container" style="background-image: url('<?php echo esc_url( $bg_url ); ?>');">
             <hgroup id="branding">
-                <h1 id="site-title"><a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                <a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                     <?php $logo_url = hybrid_get_setting( 'logo_upload' );
-                    if( empty( $logo_url ) ) : ?>
-                        <?php bloginfo( 'name' ); ?>
-                    <?php else: ?>
-                        <img src="<?php echo esc_url( $logo_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
-                    <?php endif; ?></a>
-                </h1>
-                <h2 id="site-description"><?php echo esc_attr( bloginfo( 'description' ) ); ?></h2>
-            </hgroup><!-- #branding -->
+                    if( !empty( $logo_url ) ) : ?>
+                        <div id="logo-container">
+                            <img id="logo" src="<?php echo esc_url( $logo_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
+                        </div>
+                    <?php endif; ?>
 
-            <?php $bg_url = get_header_image();
-            if( !empty( $bg_url ) ) : ?>
-                <img id="header" src="<?php echo esc_url( $bg_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?> header" />
-            <?php endif; ?>
+                    <h1 id="site-title"><?php echo esc_attr( get_bloginfo( 'name' ) ); ?></h1>
+                    <h2 id="site-description"><?php echo esc_attr( bloginfo( 'description' ) ); ?></h2>
+                </a>
+            </hgroup><!-- #branding -->
+        </div>
         </header><!-- #header -->
 
 

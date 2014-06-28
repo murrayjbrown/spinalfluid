@@ -2,18 +2,18 @@
 // Fonts
 ////////////////////////////////////////////////////////////////////////
 
-$sans-font-stack: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif-font-stack: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 $mono-font-stack: Consolas, "Liberation Mono", Courier, monospace;
 $fancy-font-stack: $sans-font-stack;
 
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css?family=Andada|Andika|Lato|Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Andada|Open+Sans|PT+Sans|Source+Code+Pro');
 
-$sans-font-family: Lato, $sans-font-stack;
+$sans-font-family: "Open Sans", $sans-font-stack;
 $serif-font-family: Andada, $serif-font-stack;
 $mono-font-family: "Source Code Pro", $mono-font-stack;
-$fancy-font-family: Andika, $fancy-font-stack;
+$fancy-font-family: "PT Sans", $fancy-font-stack;
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -112,12 +112,9 @@ $secondary-color: #ffe559; // Sahara
 
 // We use these to control header font styles
 // $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$header-font-family: $serif-font-family;
 // $header-font-weight: bold;
-$header-font-weight: normal;
 // $header-font-style: normal;
 // $header-font-color: #222;
-$header-font-color: #555;
 // $header-line-height: 1.4;
 // $header-top-margin: .2em;
 // $header-bottom-margin: .5em;
@@ -133,6 +130,7 @@ $header-font-color: #555;
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
+// $subheader-font-family: $header-font-family;
 // $subheader-font-color: lighten($header-font-color, 30%);
 // $subheader-font-weight: 300;
 // $subheader-top-margin: .2em;
@@ -140,7 +138,7 @@ $header-font-color: #555;
 
 // A general <small> styling
 $small-font-size: 60%;
-$small-font-color: lighten($header-font-color, 30%);
+$small-font-color: lighten($body-font-color, 30%);
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
@@ -1090,6 +1088,19 @@ $topbar-menu-icon-color: $primary-color;
 $header-height: 120px;
 $header-bg-color: $body-bg;
 
+$title-font-color: $primary-color;
+$title-font-family: Baskerville, $sans-font-family;
+$title-font-size: emCalc(44px);
+$title-font-style: normal;
+$title-font-weight: normal;
+
+
+$subtitle-font-color: lighten($title-font-color,3%);
+$subtitle-font-family: $fancy-font-family;
+$subtitle-font-size: emCalc(27px);
+$subtitle-font-style: normal;
+$subtitle-font-weight: normal;
+
 $article-bg-color: $body-bg;
 $article-border-color: $primary-color;
 
@@ -1098,3 +1109,5 @@ $footer-font-size: .8rem;
 
 $meta-font-size: .85rem;
 $meta-font-color: $small-font-color;
+
+
