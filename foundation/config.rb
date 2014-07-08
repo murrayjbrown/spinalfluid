@@ -1,3 +1,6 @@
+# Set character set encoding
+encoding = 'utf-8'
+
 # Require any additional compass plugins here.
 add_import_path "bower_components/foundation/scss"
 
@@ -29,7 +32,7 @@ preferred_syntax = :scss
 require 'fileutils'
 on_stylesheet_saved do |file|
   if File.exists?(file) && File.basename(file) == "app.css"
-    puts "copying: #{file} to theme's style.css"
+    puts "moving: #{file} to theme's style.css"
     FileUtils.mv(file, File.dirname(file) + "/../../" + "style.css")
   end
 end

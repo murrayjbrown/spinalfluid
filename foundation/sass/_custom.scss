@@ -6,12 +6,11 @@
 */
 .topbar h1 { display: block; visibility: visible;  } // Topbar title
 
-#header #site-title { display: none; visibility: hidden; }
 #header #site-description { display: none; visibility: hidden; }
+#header #site-title { display: none; visibility: hidden; }
 #header img#logo {
     display: block;
     visibility: visible;
-
     @media #{$small-only} {
         max-width: 300px;
     }

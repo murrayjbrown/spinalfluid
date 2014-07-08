@@ -19,25 +19,25 @@ $fancy-font-family: "PT Sans", $fancy-font-stack;
 // Foundation Override Settings
 ////////////////////////////////////////////////////////////////////////
 
-$rem-base: 14px;
+$rem-base: 16px;
 
 $body-bg: #efefef;
 $body-font-color: #333;
 $body-font-family: $serif-font-family;
 
+$paragraph-line-height: 1.6;
+
 $primary-color: #1a4f4c; // Cyprus
 $secondary-color: #ffe559; // Sahara
-
-$paragraph-line-height: 1.4;
 
 $blockquote-font-style: italic;
 
 $code-font-family: $mono-font-family;
 
-$microformat-border-width: 0px;
-
 $input-bg-color: darken($body-bg, 2%);
 $input-focus-bg-color: lighten($body-bg, 2%);
+
+$microformat-border-width: 0px;
 
 $topbar-bg: $secondary-color;
 $topbar-margin-bottom: emCalc(36px);
@@ -54,8 +54,13 @@ $topbar-menu-icon-color: $primary-color;
 ////////////////////////////////////////////////////////////////////////
 // Local Theme Settings
 ////////////////////////////////////////////////////////////////////////
+$article-bg-color: $body-bg;
+$article-border-color: $primary-color;
 
-$header-height: 160px;
+$footer-font-color: #999;
+$footer-font-size: .8rem;
+
+$header-height: 180px;
 $header-bg-color: $body-bg;
 
 $title-font-color: $primary-color;
@@ -64,16 +69,9 @@ $title-font-size: emCalc(44px);
 $title-font-style: normal;
 $title-font-weight: normal;
 
-
 $subtitle-font-color: lighten($title-font-color,3%);
 $subtitle-font-family: $fancy-font-family;
 $subtitle-font-size: emCalc(27px);
 $subtitle-font-style: normal;
 $subtitle-font-weight: normal;
-
-$article-bg-color: $body-bg;
-$article-border-color: $primary-color;
-
-$footer-font-color: #999;
-$footer-font-size: .8rem;
 
