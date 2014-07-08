@@ -5987,7 +5987,7 @@ small {
 code {
   font-family: "Source Code Pro", Consolas, "Liberation Mono", Courier, monospace;
   font-weight: bold;
-  color: #bd260d;
+  color: #444444;
 }
 
 /* Lists */
@@ -8231,47 +8231,52 @@ blockquote {
 
 /* line 125, ../sass/_elements.scss */
 pre {
-  overflow-x: scroll;
+  overflow-y: scroll;
+  word-wrap: normal;
+}
+/* line 128, ../sass/_elements.scss */
+pre code {
+  font-size: 90%;
 }
 
-/* line 128, ../sass/_elements.scss */
+/* line 130, ../sass/_elements.scss */
 pre, address {
   margin-bottom: 17px;
 }
 
-/* line 132, ../sass/_elements.scss */
+/* line 134, ../sass/_elements.scss */
 td.label {
   background: transparent;
   line-height: inherit;
 }
 
-/* line 142, ../sass/_elements.scss */
+/* line 144, ../sass/_elements.scss */
 .alignleft {
   display: inline;
   float: left;
   margin-right: 1.5em;
 }
 
-/* line 147, ../sass/_elements.scss */
+/* line 149, ../sass/_elements.scss */
 .alignright {
   display: inline;
   float: right;
   margin-left: 1.5em;
 }
 
-/* line 152, ../sass/_elements.scss */
+/* line 154, ../sass/_elements.scss */
 .aligncenter {
   clear: both;
   display: block;
   margin: 0 auto;
 }
 
-/* line 158, ../sass/_elements.scss */
+/* line 160, ../sass/_elements.scss */
 .comment-content iframe {
   max-width: 100%;
 }
 
-/* line 161, ../sass/_elements.scss */
+/* line 163, ../sass/_elements.scss */
 .comment-content table, .entry-content table {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -8279,12 +8284,12 @@ td.label {
   float: left;
 }
 
-/* line 164, ../sass/_elements.scss */
+/* line 166, ../sass/_elements.scss */
 .comment-list, .comment-list .children {
   list-style-type: none;
 }
 
-/* line 170, ../sass/_elements.scss */
+/* line 172, ../sass/_elements.scss */
 .entry-content img,
 .comment-content img,
 .widget img {
@@ -8292,7 +8297,7 @@ td.label {
   /* Fluid images for posts, comments, and widgets */
 }
 
-/* line 176, ../sass/_elements.scss */
+/* line 178, ../sass/_elements.scss */
 .entry-content img,
 img[class*="align"],
 img[class*="wp-image-"] {
@@ -8300,26 +8305,26 @@ img[class*="wp-image-"] {
   /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
 
-/* line 181, ../sass/_elements.scss */
+/* line 183, ../sass/_elements.scss */
 .entry-byline,
 .entry-footer {
   font-size: 90%;
   font-color: #666;
 }
-/* line 184, ../sass/_elements.scss */
+/* line 186, ../sass/_elements.scss */
 .entry-byline .author,
 .entry-footer .author {
   font-size: 90%;
 }
 
-/* line 187, ../sass/_elements.scss */
+/* line 189, ../sass/_elements.scss */
 .entry-content img,
 img.size-full {
   max-width: 100%;
   height: auto;
 }
 
-/* line 192, ../sass/_elements.scss */
+/* line 194, ../sass/_elements.scss */
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
   border: none;
@@ -8328,83 +8333,83 @@ img.size-full {
   padding: 0;
 }
 
-/* line 198, ../sass/_elements.scss */
+/* line 200, ../sass/_elements.scss */
 .entry-meta {
   clear: both;
 }
 
-/* line 203, ../sass/_elements.scss */
+/* line 205, ../sass/_elements.scss */
 .footer-content .credit {
   font-size: 0.8rem;
   font-color: #999999;
 }
 
-/* line 212, ../sass/_elements.scss */
+/* line 214, ../sass/_elements.scss */
 .gfield {
   list-style-type: none !important;
 }
 
-/* line 216, ../sass/_elements.scss */
+/* line 218, ../sass/_elements.scss */
 .gform_validation_container {
   display: none;
 }
 
-/* line 220, ../sass/_elements.scss */
+/* line 222, ../sass/_elements.scss */
 .loop-description {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 222, ../sass/_elements.scss */
+/* line 224, ../sass/_elements.scss */
 .loop-nav {
   border-bottom: solid 1px #1a4f4c;
   margin-bottom: .5em;
   padding-bottom: .3em;
 }
 
-/* line 227, ../sass/_elements.scss */
+/* line 229, ../sass/_elements.scss */
 .loop-nav [rel="next"] {
   float: right;
 }
 
-/* line 229, ../sass/_elements.scss */
+/* line 231, ../sass/_elements.scss */
 .panel, .sticky {
   background-color: #eaeaea;
   color: #666666;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.4em;
 }
-/* line 234, ../sass/_elements.scss */
+/* line 236, ../sass/_elements.scss */
 .panel h1, .sticky h1, .panel h2, .sticky h2, .panel h3, .sticky h3, .panel h4, .sticky h4, .panel h5, .sticky h5, .panel h6, .sticky h6 {
   color: #555555;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
 }
-/* line 239, ../sass/_elements.scss */
+/* line 241, ../sass/_elements.scss */
 .panel h1, .sticky h1 {
   font-size: 1.75rem;
 }
-/* line 240, ../sass/_elements.scss */
+/* line 242, ../sass/_elements.scss */
 .panel h2, .sticky h2 {
   font-size: 1.5rem;
 }
-/* line 241, ../sass/_elements.scss */
+/* line 243, ../sass/_elements.scss */
 .panel h3, .sticky h3 {
   font-size: 1.25rem;
 }
-/* line 242, ../sass/_elements.scss */
+/* line 244, ../sass/_elements.scss */
 .panel h4, .sticky h4 {
   font-size: 1.125rem;
 }
-/* line 243, ../sass/_elements.scss */
+/* line 245, ../sass/_elements.scss */
 .panel h5, .sticky h5 {
   font-size: 0.875rem;
 }
-/* line 244, ../sass/_elements.scss */
+/* line 246, ../sass/_elements.scss */
 .panel h6, .sticky h6 {
   font-size: 0.75rem;
 }
 
-/* line 247, ../sass/_elements.scss */
+/* line 249, ../sass/_elements.scss */
 .spine-video {
   position: relative;
   padding-top: 1.5625rem;
@@ -8433,26 +8438,26 @@ img.size-full {
   height: 100%;
 }
 
-/* line 254, ../sass/_elements.scss */
+/* line 256, ../sass/_elements.scss */
 .top-bar h1 {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 255, ../sass/_elements.scss */
+/* line 257, ../sass/_elements.scss */
 .top-bar a {
   max-height: 45px;
 }
-/* line 256, ../sass/_elements.scss */
+/* line 258, ../sass/_elements.scss */
 .top-bar input[type="text"], .top-bar .button, .top-bar input[type="submit"] {
   display: block-inline;
   font-size: 0.77778rem;
   position: relative;
   top: 7px;
 }
-/* line 260, ../sass/_elements.scss */
+/* line 262, ../sass/_elements.scss */
 .top-bar input[type="text"] a.button, .top-bar .button a.button, .top-bar input[type="submit"] a.button {
   max-height: 45px !important;
 }
-/* line 262, ../sass/_elements.scss */
+/* line 264, ../sass/_elements.scss */
 .top-bar input[type="text"] {
   height: auto;
   padding-top: 0.35rem;
@@ -8460,7 +8465,7 @@ img.size-full {
   font-size: 0.75rem;
 }
 
-/* line 275, ../sass/_elements.scss */
+/* line 277, ../sass/_elements.scss */
 .widget {
   word-wrap: break-word;
   -webkit-hyphens: auto;
@@ -8468,17 +8473,17 @@ img.size-full {
   hyphens: auto;
 }
 
-/* line 281, ../sass/_elements.scss */
+/* line 283, ../sass/_elements.scss */
 .widget ul {
   list-style: none;
 }
 
-/* line 284, ../sass/_elements.scss */
+/* line 286, ../sass/_elements.scss */
 .widget ul.tweets li a {
   display: inline;
 }
 
-/* line 288, ../sass/_elements.scss */
+/* line 290, ../sass/_elements.scss */
 .wp-caption {
   max-width: 100%;
   border-style: solid;
@@ -8510,24 +8515,24 @@ img.size-full {
   line-height: 1.4;
 }
 
-/* line 294, ../sass/_elements.scss */
+/* line 296, ../sass/_elements.scss */
 .wp-caption.aligncenter,
 .wp-caption.alignleft,
 .wp-caption.alignright {
   margin-bottom: 1.5em;
 }
 
-/* line 297, ../sass/_elements.scss */
+/* line 299, ../sass/_elements.scss */
 .wp-caption-text {
   text-align: center;
 }
 
-/* line 300, ../sass/_elements.scss */
+/* line 302, ../sass/_elements.scss */
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0;
 }
 
-/* line 303, ../sass/_elements.scss */
+/* line 305, ../sass/_elements.scss */
 .wp-caption > a, .gallery-icon > a {
   line-height: 0;
   display: inline-block;
@@ -8540,28 +8545,28 @@ img.size-full {
   box-shadow: 0 0 6px 1px rgba(26, 79, 76, 0.5);
 }
 
-/* line 305, ../sass/_elements.scss */
+/* line 307, ../sass/_elements.scss */
 #content .gallery {
   margin-bottom: 1.5em;
 }
 
-/* line 309, ../sass/_elements.scss */
+/* line 311, ../sass/_elements.scss */
 #content .gallery a img {
   border: none;
   height: auto;
 }
 
-/* line 314, ../sass/_elements.scss */
+/* line 316, ../sass/_elements.scss */
 #content .gallery dd {
   margin: 0;
 }
 
-/* line 318, ../sass/_elements.scss */
+/* line 320, ../sass/_elements.scss */
 #content ul, #content ol {
   list-style-position: inside;
 }
 
-/* line 322, ../sass/_elements.scss */
+/* line 324, ../sass/_elements.scss */
 #header {
   display: block;
   position: static;
@@ -8575,7 +8580,7 @@ img.size-full {
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 334, ../sass/_elements.scss */
+/* line 336, ../sass/_elements.scss */
 #header #header-container {
   display: block;
   position: relative;
@@ -8587,7 +8592,7 @@ img.size-full {
   padding: 0;
   background-color: transparent;
 }
-/* line 344, ../sass/_elements.scss */
+/* line 346, ../sass/_elements.scss */
 #header #header-container hgroup#branding {
   display: block;
   height: 100%;
@@ -8596,7 +8601,7 @@ img.size-full {
   font-family: Andada, "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
   text-align: left;
 }
-/* line 351, ../sass/_elements.scss */
+/* line 353, ../sass/_elements.scss */
 #header #header-container hgroup#branding #site-title {
   position: relative;
   z-index: 100;
@@ -8608,7 +8613,7 @@ img.size-full {
   font-weight: normal;
   white-space: nowrap;
 }
-/* line 362, ../sass/_elements.scss */
+/* line 364, ../sass/_elements.scss */
 #header #header-container hgroup#branding #site-description {
   position: relative;
   z-index: 100;
@@ -8620,7 +8625,7 @@ img.size-full {
   font-weight: normal;
   white-space: nowrap;
 }
-/* line 373, ../sass/_elements.scss */
+/* line 375, ../sass/_elements.scss */
 #header #header-container hgroup#branding #logo-container {
   position: relative;
   z-index: 100;
@@ -8630,14 +8635,14 @@ img.size-full {
   max-height: 11.25rem -2rem;
   margin: 1rem;
 }
-/* line 381, ../sass/_elements.scss */
+/* line 383, ../sass/_elements.scss */
 #header #header-container hgroup#branding #logo-container img#logo {
   width: auto;
   height: auto;
   vertical-align: middle;
 }
 
-/* line 392, ../sass/_elements.scss */
+/* line 394, ../sass/_elements.scss */
 [rel="tag"] {
   display: inline-block;
   margin-bottom: 2px;
@@ -8646,7 +8651,7 @@ img.size-full {
 /* =Media
 ----------------------------------------------- */
 @media screen and (max-width: 480px) {
-  /* line 405, ../sass/_elements.scss */
+  /* line 407, ../sass/_elements.scss */
   body:not(.wpadmin) div#wpadminbar {
     margin-top: -46px;
   }
@@ -9690,33 +9695,39 @@ ul.page-numbers li a:focus {
     clear: both;
   }
 }
+/* line 5, ../sass/_custom.scss */
+.crp_related_widget li {
+  font-size: 90%;
+  margin-bottom: .3em;
+}
+
 /* Site title appears in both topbar and site branding header, unelss element(s) suppressed below
 */
-/* line 7, ../sass/_custom.scss */
+/* line 12, ../sass/_custom.scss */
 .topbar h1 {
   display: block;
   visibility: visible;
 }
 
-/* line 9, ../sass/_custom.scss */
+/* line 14, ../sass/_custom.scss */
 #header #site-description {
   display: none;
   visibility: hidden;
 }
 
-/* line 10, ../sass/_custom.scss */
+/* line 15, ../sass/_custom.scss */
 #header #site-title {
   display: none;
   visibility: hidden;
 }
 
-/* line 11, ../sass/_custom.scss */
+/* line 16, ../sass/_custom.scss */
 #header img#logo {
   display: block;
   visibility: visible;
 }
 @media only screen and (max-width: 40em) {
-  /* line 11, ../sass/_custom.scss */
+  /* line 16, ../sass/_custom.scss */
   #header img#logo {
     max-width: 300px;
   }
