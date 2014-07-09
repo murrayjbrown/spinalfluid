@@ -27,7 +27,7 @@
             <hgroup id="branding">
                 <a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                     <?php // $logo_url = hybrid_get_setting( 'logo_upload' );
-                    $logo_url = "/wp-content/themes/spinalfluid/images/header-logo.png";
+                    $logo_url = trailingslashit( get_template_directory_uri() ) . '/images/header-logo.png';
                     if( !empty( $logo_url ) ) : ?>
                         <div id="logo-container">
                             <img id="logo" src="<?php echo esc_url( $logo_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
