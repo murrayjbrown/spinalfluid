@@ -25,7 +25,9 @@
         </header><!-- .entry-header -->
 
         <div class="entry-summary">
-            <?php if ( current_theme_supports( 'get-the-image' ) ) get_the_image( array( 'link_to_post' => false, 'size' => 'featured' ) ); ?>
+            <?php if ( current_theme_supports( 'get-the-image' ) ) : 
+                get_the_image( array( 'image_scan' => true, 'link_to_post' => false, 'size' => 'featured' ) ); 
+            endif; ?>
             <?php the_excerpt(); ?>
             <?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'spinalfluid' ) . '</span>', 'after' => '</p>' ) ); ?>
         </div><!-- .entry-summary -->
