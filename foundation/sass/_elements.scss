@@ -32,6 +32,7 @@ article {
     margin-bottom: 1.6em;
     padding-top: .3em;
     padding-bottom: .5em;
+    h3, h5 { font-style: italic; }
     ol {
         margin-top: 0em;
         &.comment-list {
@@ -122,21 +123,21 @@ blockquote {
     font-style: $blockquote-font-style;
 }
 
-pre{
+pre {
     overflow-y:scroll;
     word-wrap: normal;
     code { font-size: 90%; }
 }
-pre, address{
+pre, address {
     margin-bottom: 17px;
 }
 
-td.label{
+td.label {
     background: transparent;
     line-height: inherit;
 }
 
-ul.page-numbers{
+ul.page-numbers {
     @extend .pagination;
 }
 
@@ -157,7 +158,7 @@ ul.page-numbers{
     margin: 0 auto;
 }
 
-.comment-content iframe{
+.comment-content iframe {
     max-width: 100%;
 }
 .comment-content table, .entry-content table {
@@ -197,7 +198,7 @@ img.size-full {
     margin-top: 0;
     padding: 0;
 }
-.entry-meta{
+.entry-meta {
     clear: both;
 }
 
@@ -215,7 +216,7 @@ img.size-full {
     list-style-type:none !important;
 }
 
-.gform_validation_container{
+.gform_validation_container {
     display:none;
 }
 
@@ -226,7 +227,7 @@ img.size-full {
     margin-bottom: .5em;
     padding-bottom: .3em;
 }
-.loop-nav [rel="next"] { float: right;}
+.loop-nav [rel="next"] { float: right; }
 
 .panel {
     background-color: darken($body-bg, 2%);
@@ -269,7 +270,7 @@ img.size-full {
     }
 }
 
-.validation_error{
+.validation_error {
     @extend .alert-box;
     @extend .alert;
 }
@@ -280,10 +281,10 @@ img.size-full {
     -moz-hyphens: auto;
     hyphens: auto;
 }
-.widget ul{
+.widget ul {
     list-style:none;
 }
-.widget ul.tweets li a{
+.widget ul.tweets li a {
     display: inline;
 }
 
@@ -302,7 +303,7 @@ img.size-full {
 .wp-caption .wp-caption-text {
     margin: 0.8075em 0;
 }
-.wp-caption > a, .gallery-icon > a{ @include thumb;}
+.wp-caption > a, .gallery-icon > a{ @include thumb; }
 
 #content .gallery {
     margin-bottom: 1.5em;
@@ -317,7 +318,7 @@ img.size-full {
     margin: 0;
 }
 
-#content ul, #content ol{
+#content ul, #content ol {
     list-style-position: inside;
 }
 
