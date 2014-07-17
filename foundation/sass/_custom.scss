@@ -11,8 +11,8 @@
 */
 .topbar h1 { display: block; visibility: visible;  } // Topbar title
 
-#header #site-description { display: none; visibility: hidden; }
-#header #site-title { display: none; visibility: hidden; }
+#header #site-description { display: block; visibility: visible; }
+#header #site-title { display: block; visibility: visible; }
 #header img#logo {
     display: block;
     visibility: visible;

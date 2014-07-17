@@ -66,14 +66,14 @@ $header-height: 180px;
 $header-bg-color: $body-bg;
 
 $title-font-color: $primary-color;
-$title-font-family: Baskerville, $sans-font-family;
+$title-font-family: $sans-font-family;
 $title-font-size: emCalc(44px);
 $title-font-style: normal;
 $title-font-weight: normal;
 
 $subtitle-font-color: lighten($title-font-color,3%);
 $subtitle-font-family: $fancy-font-family;
-$subtitle-font-size: emCalc(27px);
-$subtitle-font-style: normal;
+$subtitle-font-size: emCalc(20px);
+$subtitle-font-style: italic;
 $subtitle-font-weight: normal;
 

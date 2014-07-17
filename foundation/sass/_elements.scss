@@ -348,14 +348,16 @@ img.size-full {
             display: block;
             height: 100%;
             max-height: $header-height;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
             background-color: transparent;
             font-family: $serif-font-family;
             text-align: left;
             #site-title {
-                position: relative;
                 z-index: 100;
                 background-color: transparent;
                 color: $title-font-color;
+                margin-top: 1em;
                 font-family: $title-font-family;
                 font-size: $title-font-size;
                 font-style: $title-font-style;
@@ -363,7 +365,6 @@ img.size-full {
                 white-space: nowrap;
             }
             #site-description {
-                position: relative;
                 z-index: 100;
                 background-color: transparent;
                 color: $subtitle-font-color;
@@ -373,19 +374,12 @@ img.size-full {
                 font-weight: $subtitle-font-weight;
                 white-space: nowrap;
             }
-            #logo-container {
-                position: relative;
+            img#logo {
                 z-index: 100;
-                float: left;
+                float: left; 
                 width: auto;
-                height: auto;
                 max-height: rem-calc($header-height)-2rem;
-                margin: 1rem;
-                img#logo {
-                    width: auto;
-                    height: auto;
-                    vertical-align: middle;
-                }
+                margin-right: 1rem;
             }
         }
     }

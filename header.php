@@ -29,9 +29,7 @@
                     <?php // $logo_url = hybrid_get_setting( 'logo_upload' );
                     $logo_url = trailingslashit( get_template_directory_uri() ) . '/images/header-logo.png';
                     if( !empty( $logo_url ) ) : ?>
-                        <div id="logo-container">
-                            <img id="logo" src="<?php echo esc_url( $logo_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
-                        </div>
+                        <img id="logo" src="<?php echo esc_url( $logo_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
                     <?php endif; ?>
 
                     <h1 id="site-title"><?php echo esc_attr( get_bloginfo( 'name' ) ); ?></h1>
