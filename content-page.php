@@ -27,6 +27,6 @@
 			<?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'spinalfluid' ) . '</span>', 'after' => '</p>' ) ); ?>
 		</div><!-- .entry-summary -->
 
+	    <?php wp_get_archives(); ?>
 	<?php } ?>
-	<?php wp_get_archives(); ?>
 </article><!-- .hentry -->
