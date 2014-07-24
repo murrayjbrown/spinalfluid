@@ -254,7 +254,13 @@ img.size-full {
 }
 
 .top-bar {
-    h1 { font-family: $sans-font-family; }
+    h1 { 
+        font-family: $sans-font-family; 
+        a:active,
+        a:hover {
+            color: white;
+        }
+    }
     a { max-height: $topbar-height; }
     input[type="text"], .button { display: block-inline;
         font-size: 0.77778rem;
