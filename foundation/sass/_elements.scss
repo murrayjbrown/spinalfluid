@@ -4,12 +4,15 @@ body {
     word-wrap:break-word;
 }
 
-a, a span { color: $primary-color;
-    &:hover { background-color: $secondary-color; text-decoration: underline; }
+a, a span { 
+    color: $primary-color;
+    &:hover { 
+        background-color: $secondary-color; 
+        text-decoration: underline; 
+    }
 }
 
-/* Thumbnail image link */
-a.th {
+a.th { /* Thumbnail image link */
     display: block;
     max-width: 100%;
     height: auto;
@@ -23,8 +26,8 @@ a.th {
         border: solid 4px white;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
     }
-
 }
+
 article {
     background-color: $article-bg-color;
     border-bottom: solid 2px $article-border-color;
@@ -140,7 +143,6 @@ td.label {
 ul.page-numbers {
     @extend .pagination;
 }
-
 
 .alignleft {
     display: inline;
@@ -359,33 +361,43 @@ img.size-full {
             background-color: transparent;
             font-family: $serif-font-family;
             text-align: left;
-            #site-title {
-                z-index: 100;
-                background-color: transparent;
-                color: $title-font-color;
-                margin-top: 1em;
-                font-family: $title-font-family;
-                font-size: $title-font-size;
-                font-style: $title-font-style;
-                font-weight: $title-font-weight;
-                white-space: nowrap;
+            a {
+                #site-title {
+                    z-index: 100;
+                    background-color: transparent;
+                    color: $title-font-color;
+                    margin-top: 1em;
+                    font-family: $title-font-family;
+                    font-size: $title-font-size;
+                    font-style: $title-font-style;
+                    font-weight: $title-font-weight;
+                    white-space: nowrap;
+                }
+                #site-description {
+                    z-index: 100;
+                    background-color: transparent;
+                    color: $subtitle-font-color;
+                    font-family: $subtitle-font-family;
+                    font-size: $subtitle-font-size;
+                    font-style: $subtitle-font-style;
+                    font-weight: $subtitle-font-weight;
+                    white-space: nowrap;
+                }
+                img#logo {
+                    z-index: 100;
+                    float: left; 
+                    width: auto;
+                    max-height: rem-calc($header-height)-2rem;
+                    margin-right: 1rem;
+                }
             }
-            #site-description {
-                z-index: 100;
-                background-color: transparent;
-                color: $subtitle-font-color;
-                font-family: $subtitle-font-family;
-                font-size: $subtitle-font-size;
-                font-style: $subtitle-font-style;
-                font-weight: $subtitle-font-weight;
-                white-space: nowrap;
-            }
-            img#logo {
-                z-index: 100;
-                float: left; 
-                width: auto;
-                max-height: rem-calc($header-height)-2rem;
-                margin-right: 1rem;
+            a:active,
+            a:hover {
+                #site-title,
+                #site-description {
+                    color: $primary-color;
+                    text-decoration: underline; 
+                }
             }
         }
     }
