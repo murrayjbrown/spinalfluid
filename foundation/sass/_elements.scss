@@ -364,9 +364,9 @@ img.size-full {
             a {
                 #site-title {
                     z-index: 100;
+                    margin-top: 1em;
                     background-color: transparent;
                     color: $title-font-color;
-                    margin-top: 1em;
                     font-family: $title-font-family;
                     font-size: $title-font-size;
                     font-style: $title-font-style;
@@ -393,10 +393,15 @@ img.size-full {
             }
             a:active,
             a:hover {
-                #site-title,
+                /* text-decoration: underline; */
+                text-decoration: none;
+                #site-title {
+                    /* color: $primary-color; */
+                    color: $title-font-color;
+                }
                 #site-description {
-                    color: $primary-color;
-                    text-decoration: underline; 
+                    /* color: $primary-color; */
+                    color: $subtitle-font-color;
                 }
             }
         }
