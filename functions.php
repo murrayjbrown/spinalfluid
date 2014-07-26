@@ -424,7 +424,16 @@ function spine2_disable_sidebars( $sidebars_widgets ) {
 
     if ( current_theme_supports( 'theme-layouts' ) && !is_admin() ) {
         if ( ! isset( $wp_customize ) ) {
-            if ( 'layout-2c-r' == theme_layouts_get_layout() || 'layout-2c-l' == theme_layouts_get_layout()) {
+            if ( 'layout-2c-r' == theme_layouts_get_layout()
+            || 'layout-2c-l' == theme_layouts_get_layout()) 
+            {
+                $sidebars_widgets['secondary'] = false;
+            }
+            else if ( 'layout-3c-r' == theme_layouts_get_layout() 
+            || 'layout-3c-c' == theme_layouts_get_layout()
+            || 'layout-3c-l' == theme_layouts_get_layout() ) 
+            {
+                $sidebars_widgets['primary'] = false;
                 $sidebars_widgets['secondary'] = false;
             }
         }
