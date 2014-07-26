@@ -67,7 +67,7 @@ function spinalfluid_theme_setup() {
 
     //include_once SPINE2_INC_DIR . 'meta.php'; //DISABLED (mjbrown)
 
-    add_action( 'customize_register', 'spine2_customize_register' );
+    //add_action( 'customize_register', 'spine2_customize_register' );
 
     /* Get action/filter hook prefix. */
     $prefix = hybrid_get_prefix();
