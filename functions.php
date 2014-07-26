@@ -256,7 +256,7 @@ function spine2_load_scripts() {
     wp_enqueue_script( 'global', SPINE2_JS_URL . 'global.js', array( 'jquery', 'foundation-app', 'foundation-topbar' ), SPINE2_VERSION, true );
 
     wp_enqueue_script('post');
-    wp_enqueue_media( array( 'post' => $post_id ) );
+    if( isset($post_id) ) wp_enqueue_media( array( 'post' => $post_id ) );
 }
 
 /**
