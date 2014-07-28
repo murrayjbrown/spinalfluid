@@ -141,7 +141,6 @@ ul.page-numbers {
     @extend .pagination;
 }
 
-
 .alignleft {
     display: inline;
     float: left;
@@ -327,19 +326,14 @@ img.size-full {
     position: static;
     z-index: -1;
     width: 100%;
-    height: $header-height;
-    min-height: $header-height;
-    max-height: $header-height;
     background-color: $header-bg-color;
     border-bottom: solid 0px $primary-color;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     #header-container {
         display: block;
         position: relative;
         width: 100%;
-        height: $header-height;
-        max-height: $header-height;
         margin: 0;
         margin-bottom: 1rem;
         padding: 0;
@@ -347,9 +341,6 @@ img.size-full {
         hgroup#branding {
             display: block;
             height: 100%;
-            max-height: $header-height;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
             background-color: transparent;
             font-family: $serif-font-family;
             text-align: left;
@@ -357,6 +348,7 @@ img.size-full {
                 z-index: 100;
                 background-color: transparent;
                 color: $title-font-color;
+                margin-left: 1rem;
                 margin-top: 1em;
                 font-family: $title-font-family;
                 font-size: $title-font-size;
@@ -366,6 +358,7 @@ img.size-full {
             }
             #site-description {
                 z-index: 100;
+                margin-left: 1rem;
                 background-color: transparent;
                 color: $subtitle-font-color;
                 font-family: $subtitle-font-family;
@@ -376,10 +369,18 @@ img.size-full {
             }
             img#logo {
                 z-index: 100;
-                float: left; 
-                width: auto;
-                max-height: rem-calc($header-height)-2rem;
-                margin-right: 1rem;
+                float: left;
+                /* @media #{$topbar-media-query} { */
+                @media screen and (min-width: 480px) {
+                    width: auto;
+                    max-height: $header-height;
+                }
+                @media screen and (max-width: 480px) {
+                    width: auto;
+                    heigt: auto;
+                    max-width: 30%;
+                    max-height: 30%;
+                }
             }
         }
     }
