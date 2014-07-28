@@ -3,7 +3,9 @@
 	<?php if ( is_singular( get_post_type() ) ) { ?>
 
 		<header class="entry-header">
-			<h1 class="entry-title"><?php single_post_title(); ?></h1>
+            <?php if( !is_front_page() ): ?>
+    			<h1 class="entry-title"><?php single_post_title(); ?></h1>
+            <?php endif ?>
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
@@ -27,6 +29,6 @@
 			<?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'spinalfluid' ) . '</span>', 'after' => '</p>' ) ); ?>
 		</div><!-- .entry-summary -->
 
+	    <?php wp_get_archives(); ?>
 	<?php } ?>
-	<?php wp_get_archives(); ?>
 </article><!-- .hentry -->
