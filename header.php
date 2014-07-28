@@ -27,7 +27,7 @@
             <hgroup id="branding">
                 <a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                     <?php // $logo_url = hybrid_get_setting( 'logo_upload' );
-                    $logo_url = trailingslashit( get_template_directory_uri() ) . '/images/header-logo.png';
+                    $logo_url = trailingslashit( get_template_directory_uri() ) . 'images/header-logo.png';
                     if( !empty( $logo_url ) ) : ?>
                         <img id="logo" src="<?php echo esc_url( $logo_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
                     <?php endif; ?>
@@ -38,12 +38,6 @@
             </hgroup><!-- #branding -->
         </div>
         </header><!-- #header -->
-
-
-        <?php /* DISABLED (mjbrown)
-          if ( get_header_image() ) echo '<div id="custom-header"><img class="header-image" src="' . esc_url( get_header_image() ) . '" alt="" /></div>';
-          //DISABLED */
-        ?>
 
         <?php get_template_part( 'menu', 'secondary' ); // Loads the menu-secondary.php template. ?>
 
