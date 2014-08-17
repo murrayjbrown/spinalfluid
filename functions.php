@@ -95,6 +95,7 @@ function spinalfluid_theme_setup() {
 
     /* Load shortcodes. */
     add_theme_support( 'hybrid-core-shortcodes' );
+    add_action( 'init', 'spinalfluid_add_shortcodes', 20 );
 
     /* Enable custom template hierarchy. */
     add_theme_support( 'hybrid-core-template-hierarchy' );
@@ -480,3 +481,29 @@ function wse95776_archives_by_cat($where, $r) {
 function wse95776_archives_join($join, $r) {
     return 'inner join wp_term_relationships on wp_posts.ID = wp_term_relationships.object_id inner join wp_term_taxonomy on wp_term_relationships.term_taxonomy_id = wp_term_taxonomy.term_taxonomy_id inner join wp_terms on wp_term_taxonomy.term_id = wp_terms.term_id';
 }
+
+
+/**
+ * Registers new shortcodes.
+ *
+ */
+function spinalfluid_add_shortcodes() {
+	if ( shortcode_exists('entry-published') )  {
+	    remove_shortcode( 'entry-published' );
+    }
+	add_shortcode( 'entry-published', 'spinalfluid_entry_published_shortcode' );
+}
+
+/**
+ * Displays the published/updated date of an individual post.
+ * Overrides hybrid_entry_published_shortcode().
+ *
+ * @since 0.7.0
+ * @access public
+ * @param array $attr
+ * @return string
+ */
+function spinalfluid_entry_published_shortcode( $attr ) {
+    return str_replace( '<time class="published', '<time class="published updated', hybrid_entry_published_shortcode( $attr ));
+}
+
