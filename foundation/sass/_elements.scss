@@ -4,12 +4,15 @@ body {
     word-wrap:break-word;
 }
 
-a, a span { color: $primary-color;
-    &:hover { background-color: $secondary-color; text-decoration: underline; }
+a, a span { 
+    color: $primary-color;
+    &:hover { 
+        background-color: $secondary-color; 
+        text-decoration: underline; 
+    }
 }
 
-/* Thumbnail image link */
-a.th {
+a.th { /* Thumbnail image link */
     display: block;
     max-width: 100%;
     height: auto;
@@ -23,8 +26,8 @@ a.th {
         border: solid 4px white;
         box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
     }
-
 }
+
 article {
     background-color: $article-bg-color;
     border-bottom: solid 2px $article-border-color;
@@ -253,7 +256,13 @@ img.size-full {
 }
 
 .top-bar {
-    h1 { font-family: $sans-font-family; }
+    h1 { 
+        font-family: $sans-font-family; 
+        a:active,
+        a:hover {
+            color: white;
+        }
+    }
     a { max-height: $topbar-height; }
     input[type="text"], .button { display: block-inline;
         font-size: 0.77778rem;
@@ -344,6 +353,7 @@ img.size-full {
             background-color: transparent;
             font-family: $serif-font-family;
             text-align: left;
+<<<<<<< HEAD
             #site-title {
                 z-index: 100;
                 background-color: transparent;
@@ -380,6 +390,49 @@ img.size-full {
                     heigt: auto;
                     max-width: 30%;
                     max-height: 30%;
+=======
+            a {
+                #site-title {
+                    z-index: 100;
+                    margin-top: 1em;
+                    background-color: transparent;
+                    color: $title-font-color;
+                    font-family: $title-font-family;
+                    font-size: $title-font-size;
+                    font-style: $title-font-style;
+                    font-weight: $title-font-weight;
+                    white-space: nowrap;
+                }
+                #site-description {
+                    z-index: 100;
+                    background-color: transparent;
+                    color: $subtitle-font-color;
+                    font-family: $subtitle-font-family;
+                    font-size: $subtitle-font-size;
+                    font-style: $subtitle-font-style;
+                    font-weight: $subtitle-font-weight;
+                    white-space: nowrap;
+                }
+                img#logo {
+                    z-index: 100;
+                    float: left; 
+                    width: auto;
+                    max-height: rem-calc($header-height)-2rem;
+                    margin-right: 1rem;
+                }
+            }
+            a:active,
+            a:hover {
+                /* text-decoration: underline; */
+                text-decoration: none;
+                #site-title {
+                    /* color: $primary-color; */
+                    color: $title-font-color;
+                }
+                #site-description {
+                    /* color: $primary-color; */
+                    color: $subtitle-font-color;
+>>>>>>> 20b523d845e98a3f844c63ec4c55d481668f6950
                 }
             }
         }

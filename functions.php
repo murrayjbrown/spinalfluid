@@ -67,7 +67,7 @@ function spinalfluid_theme_setup() {
 
     //include_once SPINE2_INC_DIR . 'meta.php'; //DISABLED (mjbrown)
 
-    add_action( 'customize_register', 'spine2_customize_register' );
+    //add_action( 'customize_register', 'spine2_customize_register' );
 
     /* Get action/filter hook prefix. */
     $prefix = hybrid_get_prefix();
@@ -95,6 +95,7 @@ function spinalfluid_theme_setup() {
 
     /* Load shortcodes. */
     add_theme_support( 'hybrid-core-shortcodes' );
+    add_action( 'init', 'spinalfluid_add_shortcodes', 20 );
 
     /* Enable custom template hierarchy. */
     add_theme_support( 'hybrid-core-template-hierarchy' );
@@ -256,7 +257,7 @@ function spine2_load_scripts() {
     wp_enqueue_script( 'global', SPINE2_JS_URL . 'global.js', array( 'jquery', 'foundation-app', 'foundation-topbar' ), SPINE2_VERSION, true );
 
     wp_enqueue_script('post');
-    wp_enqueue_media( array( 'post' => $post_id ) );
+    if( isset($post_id) ) wp_enqueue_media( array( 'post' => $post_id ) );
 }
 
 /**
@@ -424,7 +425,16 @@ function spine2_disable_sidebars( $sidebars_widgets ) {
 
     if ( current_theme_supports( 'theme-layouts' ) && !is_admin() ) {
         if ( ! isset( $wp_customize ) ) {
-            if ( 'layout-2c-r' == theme_layouts_get_layout() || 'layout-2c-l' == theme_layouts_get_layout()) {
+            if ( 'layout-2c-r' == theme_layouts_get_layout()
+            || 'layout-2c-l' == theme_layouts_get_layout()) 
+            {
+                $sidebars_widgets['secondary'] = false;
+            }
+            else if ( 'layout-3c-r' == theme_layouts_get_layout() 
+            || 'layout-3c-c' == theme_layouts_get_layout()
+            || 'layout-3c-l' == theme_layouts_get_layout() ) 
+            {
+                $sidebars_widgets['primary'] = false;
                 $sidebars_widgets['secondary'] = false;
             }
         }
@@ -446,7 +456,7 @@ function spine2_add_featured_img_class( $img_html ) {
     return $img_html;
 }
 
-add_filter('getarchives_where', 'wse95776_archives_by_cat', 10, 2 );
+//add_filter('getarchives_where', 'wse95776_archives_by_cat', 10, 2 );
 
 /**
  * Filter the posts by category slug
@@ -459,7 +469,7 @@ function wse95776_archives_by_cat($where, $r) {
     return "WHERE wp_posts.post_type = 'post' AND wp_posts.post_status = 'publish' AND wp_terms.slug = 'Uncategorized' AND wp_term_taxonomy.taxonomy = 'category'";
 }
 
-add_filter('getarchives_join', 'wse95776_archives_join',10,2);
+//add_filter('getarchives_join', 'wse95776_archives_join',10,2);
 
 /**
  * Defines the necessary joins to query the terms
@@ -471,3 +481,29 @@ add_filter('getarchives_join', 'wse95776_archives_join',10,2);
 function wse95776_archives_join($join, $r) {
     return 'inner join wp_term_relationships on wp_posts.ID = wp_term_relationships.object_id inner join wp_term_taxonomy on wp_term_relationships.term_taxonomy_id = wp_term_taxonomy.term_taxonomy_id inner join wp_terms on wp_term_taxonomy.term_id = wp_terms.term_id';
 }
+
+
+/**
+ * Registers new shortcodes.
+ *
+ */
+function spinalfluid_add_shortcodes() {
+	if ( shortcode_exists('entry-published') )  {
+	    remove_shortcode( 'entry-published' );
+    }
+	add_shortcode( 'entry-published', 'spinalfluid_entry_published_shortcode' );
+}
+
+/**
+ * Displays the published/updated date of an individual post.
+ * Overrides hybrid_entry_published_shortcode().
+ *
+ * @since 0.7.0
+ * @access public
+ * @param array $attr
+ * @return string
+ */
+function spinalfluid_entry_published_shortcode( $attr ) {
+    return str_replace( '<time class="published', '<time class="published updated', hybrid_entry_published_shortcode( $attr ));
+}
+
